@@ -8,13 +8,21 @@ MVVM, Clean Architecture, ReactiveX
 ## Library
 
 Alamofire - https://github.com/Alamofire/Alamofire
+
 RxSwift - https://github.com/ReactiveX/RxSwift
+
 RxCocoa - https://github.com/ReactiveX/RxSwift/tree/main/RxCocoa
+
 (ReactorKit?) - https://github.com/ReactorKit/ReactorKit
+
 SnapKit - https://github.com/SnapKit/SnapKit
+
 Swinject - https://github.com/Swinject/Swinject
+
 Realm - https://docs.mongodb.com/realm-legacy/docs/swift/latest/
+
 Then - https://github.com/devxoul/Then
+
 SwiftLint - https://github.com/realm/SwiftLint
 
 ## Library Managing
