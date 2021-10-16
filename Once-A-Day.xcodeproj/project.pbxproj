@@ -101,14 +101,17 @@
 		436FE41D271B1EBE00DA5CBF /* Once-A-Day */ = {
 			isa = PBXGroup;
 			children = (
-				436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */,
-				436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */,
+				436FE46F271B287000DA5CBF /* Application */,
+				436FE471271B293E00DA5CBF /* Resources */,
+				436FE46E271B285100DA5CBF /* SupportingFiles */,
+				436FE470271B28E100DA5CBF /* CoreData */,
+				436FE46D271B284600DA5CBF /* Extensions */,
+				436FE46A271B282E00DA5CBF /* Presentation */,
+				436FE46B271B283900DA5CBF /* Domain */,
+				436FE46C271B283E00DA5CBF /* Data */,
 				436FE422271B1EBE00DA5CBF /* ViewController.swift */,
-				436FE424271B1EBE00DA5CBF /* Main.storyboard */,
-				436FE42A271B1EBF00DA5CBF /* Assets.xcassets */,
 				436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */,
-				436FE42F271B1EBF00DA5CBF /* Info.plist */,
-				436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */,
+				436FE424271B1EBE00DA5CBF /* Main.storyboard */,
 			);
 			path = "Once-A-Day";
 			sourceTree = "<group>";
@@ -129,6 +132,67 @@
 				436FE445271B1EBF00DA5CBF /* Info.plist */,
 			);
 			path = "Once-A-DayUITests";
+			sourceTree = "<group>";
+		};
+		436FE46A271B282E00DA5CBF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		436FE46B271B283900DA5CBF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		436FE46C271B283E00DA5CBF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		436FE46D271B284600DA5CBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		436FE46E271B285100DA5CBF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				436FE42F271B1EBF00DA5CBF /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		436FE46F271B287000DA5CBF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */,
+				436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		436FE470271B28E100DA5CBF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		436FE471271B293E00DA5CBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				436FE42A271B1EBF00DA5CBF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
