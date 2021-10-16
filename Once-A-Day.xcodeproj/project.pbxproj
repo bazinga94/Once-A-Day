@@ -10,12 +10,11 @@
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE423271B1EBE00DA5CBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE422271B1EBE00DA5CBF /* ViewController.swift */; };
-		436FE426271B1EBE00DA5CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE424271B1EBE00DA5CBF /* Main.storyboard */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
 		436FE42B271B1EBF00DA5CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42A271B1EBF00DA5CBF /* Assets.xcassets */; };
-		436FE42E271B1EBF00DA5CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */; };
 		436FE439271B1EBF00DA5CBF /* Once_A_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE438271B1EBF00DA5CBF /* Once_A_DayTests.swift */; };
 		436FE444271B1EBF00DA5CBF /* Once_A_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE443271B1EBF00DA5CBF /* Once_A_DayUITests.swift */; };
+		436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,6 @@
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		436FE422271B1EBE00DA5CBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		436FE425271B1EBE00DA5CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		436FE428271B1EBE00DA5CBF /* Once_A_Day.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Once_A_Day.xcdatamodel; sourceTree = "<group>"; };
 		436FE42A271B1EBF00DA5CBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		436FE42D271B1EBF00DA5CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				436FE46C271B283E00DA5CBF /* Data */,
 				436FE422271B1EBE00DA5CBF /* ViewController.swift */,
 				436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */,
-				436FE424271B1EBE00DA5CBF /* Main.storyboard */,
 			);
 			path = "Once-A-Day";
 			sourceTree = "<group>";
@@ -298,9 +295,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436FE42E271B1EBF00DA5CBF /* LaunchScreen.storyboard in Resources */,
+				436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */,
 				436FE42B271B1EBF00DA5CBF /* Assets.xcassets in Resources */,
-				436FE426271B1EBE00DA5CBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,14 +360,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		436FE424271B1EBE00DA5CBF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				436FE425271B1EBE00DA5CBF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -506,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWC7QPX692;
-				INFOPLIST_FILE = "Once-A-Day/Info.plist";
+				INFOPLIST_FILE = "Once-A-Day/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWC7QPX692;
-				INFOPLIST_FILE = "Once-A-Day/Info.plist";
+				INFOPLIST_FILE = "Once-A-Day/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
