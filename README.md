@@ -13,11 +13,11 @@ RxSwift - https://github.com/ReactiveX/RxSwift
 
 RxCocoa - https://github.com/ReactiveX/RxSwift/tree/main/RxCocoa
 
-(ReactorKit?) - https://github.com/ReactorKit/ReactorKit
+(ReactorKit) - https://github.com/ReactorKit/ReactorKit
 
 SnapKit - https://github.com/SnapKit/SnapKit
 
-Swinject - https://github.com/Swinject/Swinject
+(Swinject) - https://github.com/Swinject/Swinject
 
 Realm - https://docs.mongodb.com/realm-legacy/docs/swift/latest/
 
