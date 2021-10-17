@@ -18,5 +18,7 @@ opt_in_rules:
 
 excluded: # SwiftLint 검사에서 제외할 파일 경로
   - Pods
-  - ProjectName/AppDelegate.swift
-  - ProjectName/SceneDelegate.swift
+  - Once-A-Day/Application/AppDelegate.swift
+  - Once-A-Day/Application/SceneDelegate.swift
+  - Once-A-DayTests
+  - Once-A-DayUITests
