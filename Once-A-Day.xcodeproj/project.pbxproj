@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		436FE444271B1EBF00DA5CBF /* Once_A_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE443271B1EBF00DA5CBF /* Once_A_DayUITests.swift */; };
 		436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */; };
 		439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 439E4275271BCAE70092CC00 /* .swiftlint.yml */; };
+		439E4285271BE5740092CC00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 439E4284271BE5740092CC00 /* SnapKit */; };
 		48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3BE14367A748BB9E1B651 /* Pods_Once_A_Day.framework */; };
 		E7DABC9E40D830E4F5F85685 /* Pods_Once_A_DayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E6AEFF3B3B1E63CF42D1D /* Pods_Once_A_DayTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */,
+				439E4285271BE5740092CC00 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +255,9 @@
 			dependencies = (
 			);
 			name = "Once-A-Day";
+			packageProductDependencies = (
+				439E4284271BE5740092CC00 /* SnapKit */,
+			);
 			productName = "Once-A-Day";
 			productReference = 436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 436FE412271B1EBE00DA5CBF;
+			packageReferences = (
+				439E4283271BE5740092CC00 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 436FE41C271B1EBE00DA5CBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -794,6 +802,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		439E4283271BE5740092CC00 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		439E4284271BE5740092CC00 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 439E4283271BE5740092CC00 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */ = {
