@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import Then
 
 class BaseTabBarViewController: UITabBarController {
-	var customTabBar: BottomTabNavigationMenu!
-	var topConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
-	var tabBarHeight: CGFloat = 120.0
+	private var customTabBar: BottomTabNavigationMenu! = .init().then {
+		$0.translatesAutoresizingMaskIntoConstraints = false
+		$0.clipsToBounds = true
+	}
+	private var topConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
+	private let tabBarHeight: CGFloat = 120.0
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.loadTabBar()
+		self.view.backgroundColor = .white
+		loadTabBar()
 	}
 
 	private func loadTabBar() {
@@ -43,11 +48,10 @@ class BaseTabBarViewController: UITabBarController {
 
 	private func setupCustomTabMenu(_ menuItems: [BottomTabBarItem]) {
 		let frame = tabBar.frame
-		var viewControllers = [UIViewController]()
+		var viewControllers: [UIViewController] = []
 
-		self.customTabBar = BottomTabNavigationMenu(menuItems: menuItems, frame: frame)
-		self.customTabBar.translatesAutoresizingMaskIntoConstraints = false
-		self.customTabBar.clipsToBounds = true
+		self.customTabBar.frame = frame
+		self.customTabBar.menuItems = menuItems
 		self.customTabBar.delegate = self
 		self.view.addSubview(customTabBar)
 
@@ -62,7 +66,6 @@ class BaseTabBarViewController: UITabBarController {
 
 		menuItems.forEach { viewControllers.append($0.viewController) }
 		self.viewControllers = viewControllers
-		self.view.layoutIfNeeded()
 	}
 
 	func changeTab(index: Int) {

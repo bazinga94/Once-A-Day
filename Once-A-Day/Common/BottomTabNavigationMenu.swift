@@ -13,21 +13,37 @@ protocol BottomTabNavigationMenuDelegate: AnyObject {
 }
 
 class BottomTabNavigationMenu: UIView {
-	var activeItem: Int = 0
-	let iconViewHeight: CGFloat = 40
+	private var activeItem: Int = 0
+	private let iconViewHeight: CGFloat = 40
+
+	var menuItems: [BottomTabBarItem] = [] {
+		willSet {
+			subviews.forEach({ $0.removeFromSuperview() })
+		}
+		didSet {
+			addTabBarView(items: menuItems)
+		}
+	}
+
 	weak var delegate: BottomTabNavigationMenuDelegate?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
+		backgroundColor = .clear
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+		fatalError()
 	}
 
 	convenience init(menuItems: [BottomTabBarItem], frame: CGRect) {
 		self.init(frame: frame)
+		backgroundColor = .clear
+		addTabBarView(items: menuItems)
+	}
 
+	private func addTabBarView(items: [BottomTabBarItem]) {
 		let itemWidth = self.frame.width / CGFloat(menuItems.count)
 
 		for (idx, menuItem) in menuItems.enumerated() {
@@ -50,49 +66,47 @@ class BottomTabNavigationMenu: UIView {
 			self.setNeedsLayout()
 			self.activateTab(index: 0)	// 첫번째 tab
 		}
-
-		backgroundColor = .clear
 	}
 
 	private func createTabItemView(item: BottomTabBarItem) -> UIView {
 		let tabItemView = UIView(frame: .zero)
-		let tabItemLabel = UILabel(frame: .zero)
+		let tabTitleLabel = UILabel(frame: .zero)
 		//		let tabItemIconView = UIImageView(frame: .zero)
-		let tabItemIconView = item.lottieView
+		let tabIconLottieView = item.lottieView
 
 		tabItemView.tag = 11
-		tabItemLabel.tag = 12
-		tabItemIconView.tag = 13
+		tabTitleLabel.tag = 12
+		tabIconLottieView.tag = 13
 
-		tabItemLabel.text = item.title
-		tabItemLabel.textColor = .lightGray
-		tabItemLabel.textAlignment = .center
-		tabItemLabel.translatesAutoresizingMaskIntoConstraints = false
-		tabItemLabel.clipsToBounds = true
+		tabTitleLabel.text = item.title
+		tabTitleLabel.textColor = .lightGray
+		tabTitleLabel.textAlignment = .center
+		tabTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+		tabTitleLabel.clipsToBounds = true
 
 		//		tabItemIconView.image = item.iconImage.withRenderingMode(.automatic)	// 이거 머지??
 		//		tabItemIconView.image = item.iconImage
-		tabItemIconView.loopMode = .playOnce
-		tabItemIconView.contentMode = .scaleAspectFill
+		tabIconLottieView.loopMode = .playOnce
+		tabIconLottieView.contentMode = .scaleAspectFill
 		//		tabItemIconView.frame = .init()
-		tabItemIconView.translatesAutoresizingMaskIntoConstraints = false
-		tabItemIconView.clipsToBounds = true
+		tabIconLottieView.translatesAutoresizingMaskIntoConstraints = false
+		tabIconLottieView.clipsToBounds = true
 
 		tabItemView.backgroundColor = .clear
-		tabItemView.addSubview(tabItemLabel)
-		tabItemView.addSubview(tabItemIconView)
+		tabItemView.addSubview(tabTitleLabel)
+		tabItemView.addSubview(tabIconLottieView)
 		tabItemView.translatesAutoresizingMaskIntoConstraints = false
 		tabItemView.clipsToBounds = true
 
 		NSLayoutConstraint.activate([
-			tabItemIconView.heightAnchor.constraint(equalToConstant: self.iconViewHeight),
-			tabItemIconView.widthAnchor.constraint(equalToConstant: self.iconViewHeight),
-			tabItemIconView.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
-			tabItemIconView.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 8),
+			tabIconLottieView.heightAnchor.constraint(equalToConstant: self.iconViewHeight),
+			tabIconLottieView.widthAnchor.constraint(equalToConstant: self.iconViewHeight),
+			tabIconLottieView.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
+			tabIconLottieView.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 8),
 
-			tabItemLabel.heightAnchor.constraint(equalToConstant: 15),
-			tabItemLabel.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
-			tabItemLabel.topAnchor.constraint(equalTo: tabItemIconView.bottomAnchor, constant: 4)
+			tabTitleLabel.heightAnchor.constraint(equalToConstant: 15),
+			tabTitleLabel.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
+			tabTitleLabel.topAnchor.constraint(equalTo: tabIconLottieView.bottomAnchor, constant: 4)
 		])
 
 		tabItemView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:))))
