@@ -9,6 +9,8 @@ MVVM, Clean Architecture, ReactiveX
 
 (Alamofire) - https://github.com/Alamofire/Alamofire
 
+lottie - https://github.com/airbnb/lottie-ios.git
+
 (ReachabilitySwift) - https://github.com/ashleymills/Reachability.swift
 
 (ReactorKit) - https://github.com/ReactorKit/ReactorKit
