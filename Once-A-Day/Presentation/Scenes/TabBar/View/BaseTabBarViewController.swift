@@ -28,10 +28,13 @@ class BaseTabBarViewController: UITabBarController {
 		let sampleViewController = UIViewController()
 		sampleViewController.view.backgroundColor = .init(red: 177/255, green: 156/255, blue: 217/255, alpha: 1.0)
 		let firstItem = BottomTabBarItem(title: "혜윤아", viewController: sampleViewController)
-		let secondItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
-		let thirdItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)
+		let secondItem = BottomTabBarItem(title: "오늘도", viewController: sampleViewController)
+		let thirdItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
+		let fourthItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)
+		let aaa = BottomTabBarItem(title: "사랑해", viewController: sampleViewController)
+		let bbb = BottomTabBarItem(title: "❤️", viewController: sampleViewController)
 
-		let tabBarItems: [BottomTabBarItemType] = [firstItem, secondItem, thirdItem]		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
+		let tabBarItems: [BottomTabBarItemType] = [firstItem, secondItem, thirdItem, fourthItem, aaa, bbb]		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
 		self.setupCustomTabMenu(tabBarItems)
 		self.setupBlurEffectView()
 		self.selectedIndex = 0	// 초기 index는 0
