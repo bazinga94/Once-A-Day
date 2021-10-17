@@ -26,7 +26,7 @@ class BaseTabBarViewController: UITabBarController {
 	private func loadTabBar() {
 		tabBar.isHidden = true
 		let sampleViewController = UIViewController()
-		sampleViewController.view.backgroundColor = .white
+		sampleViewController.view.backgroundColor = .init(red: 177/255, green: 156/255, blue: 217/255, alpha: 1.0)
 		let firstItem = BottomTabBarItem(title: "혜윤아", viewController: sampleViewController)
 		let secondItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
 		let thirdItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)

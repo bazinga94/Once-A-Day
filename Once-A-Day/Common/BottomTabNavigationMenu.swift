@@ -106,7 +106,7 @@ class BottomTabNavigationMenu: UIView {
 
 			tabTitleLabel.heightAnchor.constraint(equalToConstant: 15),
 			tabTitleLabel.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
-			tabTitleLabel.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 10)
+			tabTitleLabel.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 20)
 //			tabTitleLabel.topAnchor.constraint(equalTo: tabIconLottieView.bottomAnchor, constant: 4)
 		])
 
