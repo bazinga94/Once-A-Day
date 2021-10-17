@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol BottomTabNavigationMenuDelegate: AnyObject {
 	func itemTapped(index: Int)
@@ -63,7 +64,7 @@ class BottomTabNavigationMenu: UIView {
 		tabItemLabel.tag = 12
 		tabItemIconView.tag = 13
 
-		tabItemLabel.text = item.type.rawValue
+		tabItemLabel.text = item.title
 		tabItemLabel.textColor = .lightGray
 		tabItemLabel.textAlignment = .center
 		tabItemLabel.translatesAutoresizingMaskIntoConstraints = false

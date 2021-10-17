@@ -1,19 +1,21 @@
 disabled_rules: # Default Rules에서 비활성화할 규칙
 
-    # 라인 뒤에 공백이 없어야 합니다. https://realm.github.io/SwiftLint/trailing_whitespace.html
-    - trailing_whitespace
+#	라인 뒤에 공백이 없어야 합니다. https://realm.github.io/SwiftLint/trailing_whitespace.html
+#	- trailing_whitespace
 
-    # 강제 캐스팅은 피해야합니다. https://realm.github.io/SwiftLint/force_cast.html
-    - force_cast
+#	강제 캐스팅은 피해야합니다. https://realm.github.io/SwiftLint/force_cast.html
+#	- force_cast
 
-    # 강제 언래핑은 피해야합니다. https://realm.github.io/SwiftLint/force_unwrapping.html
-    - force_unwrapping
+#	강제 언래핑은 피해야합니다. https://realm.github.io/SwiftLint/force_unwrapping.html
+#	- force_unwrapping
+
+#	- line_length
 
 opt_in_rules:
-  # .count==0 보다는 .isEmpty를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/empty_count.html
+#	.count==0 보다는 .isEmpty를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/empty_count.html
   - empty_count
 
-  # 빈 String 문자열과 비교하는 것 보다는 .isEmpty를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/empty_string.html
+#	빈 String 문자열과 비교하는 것 보다는 .isEmpty를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/empty_string.html
   - empty_string
 
 excluded: # SwiftLint 검사에서 제외할 파일 경로
@@ -22,3 +24,20 @@ excluded: # SwiftLint 검사에서 제외할 파일 경로
   - Once-A-Day/Application/SceneDelegate.swift
   - Once-A-DayTests
   - Once-A-DayUITests
+
+# Rule parameters
+line_length:
+  - 150 #warning
+  - 300 #error
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:
+    warning: 40
+    error: 40
+#	excluded: # 제외할 문자열 목록
+#		- id
+#		- URL
+
