@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 import Then
 
 class BaseTabBarViewController: UITabBarController {
@@ -24,7 +25,13 @@ class BaseTabBarViewController: UITabBarController {
 
 	private func loadTabBar() {
 		tabBar.isHidden = true
-		let tabBarItems: [BottomTabBarItem] = []		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
+		let sampleViewController = UIViewController()
+		sampleViewController.view.backgroundColor = .white
+		let firstItem = BottomTabBarItem(title: "혜윤아", viewController: sampleViewController)
+		let secondItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
+		let thirdItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)
+
+		let tabBarItems: [BottomTabBarItemType] = [firstItem, secondItem, thirdItem]		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
 		self.setupCustomTabMenu(tabBarItems)
 		self.setupBlurEffectView()
 		self.selectedIndex = 0	// 초기 index는 0
@@ -46,7 +53,7 @@ class BaseTabBarViewController: UITabBarController {
 		])
 	}
 
-	private func setupCustomTabMenu(_ menuItems: [BottomTabBarItem]) {
+	private func setupCustomTabMenu(_ menuItems: [BottomTabBarItemType]) {
 		let frame = tabBar.frame
 		var viewControllers: [UIViewController] = []
 

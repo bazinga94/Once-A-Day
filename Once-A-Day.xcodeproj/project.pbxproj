@@ -20,7 +20,7 @@
 		439E428B271BF67C0092CC00 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 439E428A271BF67C0092CC00 /* Then */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
-		43FE71D2271C55C50053DBE3 /* BottomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItem.swift */; };
+		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
 		43FE71D5271C576C0053DBE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 43FE71D4271C576C0053DBE3 /* Lottie */; };
 		48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3BE14367A748BB9E1B651 /* Pods_Once_A_Day.framework */; };
 		E7DABC9E40D830E4F5F85685 /* Pods_Once_A_DayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E6AEFF3B3B1E63CF42D1D /* Pods_Once_A_DayTests.framework */; };
@@ -62,7 +62,7 @@
 		439E4275271BCAE70092CC00 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
-		43FE71D1271C55C50053DBE3 /* BottomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItem.swift; sourceTree = "<group>"; };
+		43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItemType.swift; sourceTree = "<group>"; };
 		53D211691A30E2641494DC39 /* Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig"; path = "Target Support Files/Pods-Once-A-Day-Once-A-DayUITests/Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D74D31CF3E25A414FDD85AD /* Pods-Once-A-Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day.debug.xcconfig"; path = "Target Support Files/Pods-Once-A-Day/Pods-Once-A-Day.debug.xcconfig"; sourceTree = "<group>"; };
 		711A41B040BA5D6717DFD432 /* Pods-Once-A-Day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day.release.xcconfig"; path = "Target Support Files/Pods-Once-A-Day/Pods-Once-A-Day.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		43FE71D0271C559B0053DBE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				43FE71D1271C55C50053DBE3 /* BottomTabBarItem.swift */,
+				43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */,
 				43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */,
 			);
 			path = Common;
@@ -511,7 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */,
-				43FE71D2271C55C50053DBE3 /* BottomTabBarItem.swift in Sources */,
+				43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */,
 				436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */,
 				436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */,
 				43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */,
