@@ -19,7 +19,7 @@ class BaseTabBarViewController: UITabBarController {
 
 	private func loadTabBar() {
 		tabBar.isHidden = true
-		let tabBarItems: [BottomTabBarItem] = [BankingTab(), AssetTab(), BenefitTab()]		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
+		let tabBarItems: [BottomTabBarItem] = []		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
 		self.setupCustomTabMenu(tabBarItems)
 		self.setupBlurEffectView()
 		self.selectedIndex = 0	// 초기 index는 0
@@ -71,7 +71,7 @@ class BaseTabBarViewController: UITabBarController {
 }
 
 extension BaseTabBarViewController: BottomTabNavigationMenuDelegate {
-	func itemTapped(tabIndex: Int) {
+	func itemTapped(index tabIndex: Int) {
 		changeTab(index: tabIndex)
 	}
 }

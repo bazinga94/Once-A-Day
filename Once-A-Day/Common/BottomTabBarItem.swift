@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol BottomTabBarItem {
 	var title: String { get }

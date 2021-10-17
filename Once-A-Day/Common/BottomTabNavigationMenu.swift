@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 protocol BottomTabNavigationMenuDelegate: AnyObject {
 	func itemTapped(index: Int)
