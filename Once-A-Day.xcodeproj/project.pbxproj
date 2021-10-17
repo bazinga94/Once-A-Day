@@ -16,6 +16,7 @@
 		436FE439271B1EBF00DA5CBF /* Once_A_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE438271B1EBF00DA5CBF /* Once_A_DayTests.swift */; };
 		436FE444271B1EBF00DA5CBF /* Once_A_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE443271B1EBF00DA5CBF /* Once_A_DayUITests.swift */; };
 		436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */; };
+		439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 439E4275271BCAE70092CC00 /* .swiftlint.yml */; };
 		48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3BE14367A748BB9E1B651 /* Pods_Once_A_Day.framework */; };
 		E7DABC9E40D830E4F5F85685 /* Pods_Once_A_DayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E6AEFF3B3B1E63CF42D1D /* Pods_Once_A_DayTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		436FE43F271B1EBF00DA5CBF /* Once-A-DayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Once-A-DayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE443271B1EBF00DA5CBF /* Once_A_DayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Once_A_DayUITests.swift; sourceTree = "<group>"; };
 		436FE445271B1EBF00DA5CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439E4275271BCAE70092CC00 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		53D211691A30E2641494DC39 /* Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig"; path = "Target Support Files/Pods-Once-A-Day-Once-A-DayUITests/Pods-Once-A-Day-Once-A-DayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D74D31CF3E25A414FDD85AD /* Pods-Once-A-Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day.debug.xcconfig"; path = "Target Support Files/Pods-Once-A-Day/Pods-Once-A-Day.debug.xcconfig"; sourceTree = "<group>"; };
 		711A41B040BA5D6717DFD432 /* Pods-Once-A-Day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Once-A-Day.release.xcconfig"; path = "Target Support Files/Pods-Once-A-Day/Pods-Once-A-Day.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		436FE412271B1EBE00DA5CBF = {
 			isa = PBXGroup;
 			children = (
+				439E4275271BCAE70092CC00 /* .swiftlint.yml */,
 				436FE41D271B1EBE00DA5CBF /* Once-A-Day */,
 				436FE437271B1EBF00DA5CBF /* Once-A-DayTests */,
 				436FE442271B1EBF00DA5CBF /* Once-A-DayUITests */,
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */,
 				436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */,
 				436FE42B271B1EBF00DA5CBF /* Assets.xcassets in Resources */,
 			);
