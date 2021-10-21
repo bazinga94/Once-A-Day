@@ -15,7 +15,6 @@ class BaseTabBarViewController: UITabBarController {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.clipsToBounds = true
 	}
-	private var topConstraint: NSLayoutConstraint = NSLayoutConstraint.init()
 	private let tabBarHeight: CGFloat = 120.0
 
 	override func viewDidLoad() {
@@ -66,14 +65,12 @@ class BaseTabBarViewController: UITabBarController {
 		self.customTabBar.delegate = self
 		self.view.addSubview(customTabBar)
 
-		self.topConstraint = self.customTabBar.topAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -self.tabBarHeight)
-
-		NSLayoutConstraint.activate([
-			self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
-			self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
-			self.topConstraint,
-			self.customTabBar.heightAnchor.constraint(equalToConstant: self.tabBarHeight)
-		])
+		customTabBar.snp.makeConstraints { make in
+			make.top.equalTo(self.view.snp.bottom).offset(-self.tabBarHeight)
+			make.leading.equalTo(tabBar)
+			make.trailing.equalTo(tabBar)
+			make.height.equalTo(self.tabBarHeight)
+		}
 
 		menuItems.forEach { viewControllers.append($0.viewController) }
 		self.viewControllers = viewControllers
