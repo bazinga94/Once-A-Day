@@ -49,19 +49,25 @@ class BottomTabNavigationMenu: UIView {
 		for (idx, menuItem) in menuItems.enumerated() {
 			let itemLeadingAnchor = itemWidth * CGFloat(idx)
 
-			let itemView = createTabItemView(item: menuItem)
-			itemView.translatesAutoresizingMaskIntoConstraints = false
-			itemView.clipsToBounds = true
-			itemView.tag = idx
+			let itemView = createTabItemView(item: menuItem).then {
+				$0.translatesAutoresizingMaskIntoConstraints = false
+				$0.clipsToBounds = true
+				$0.tag = idx
+				self.addSubview($0)
+			}
 
-			self.addSubview(itemView)
-
-			NSLayoutConstraint.activate([
-				itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
-				itemView.widthAnchor.constraint(equalToConstant: itemWidth),
-				itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: itemLeadingAnchor),
-				itemView.topAnchor.constraint(equalTo: self.topAnchor)
-			])
+			itemView.snp.makeConstraints { make in
+				make.leading.equalTo(self).offset(itemLeadingAnchor)
+				make.top.equalTo(self)
+				make.height.equalTo(self)
+				make.width.equalTo(itemWidth)
+			}
+//			NSLayoutConstraint.activate([
+//				itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
+//				itemView.widthAnchor.constraint(equalToConstant: itemWidth),
+//				itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: itemLeadingAnchor),
+//				itemView.topAnchor.constraint(equalTo: self.topAnchor)
+//			])
 
 			self.setNeedsLayout()
 			self.activateTab(index: 0)	// 첫번째 tab
@@ -69,20 +75,27 @@ class BottomTabNavigationMenu: UIView {
 	}
 
 	private func createTabItemView(item: BottomTabBarItemType) -> UIView {
-		let tabItemView = UIView(frame: .zero)
-		let tabTitleLabel = UILabel(frame: .zero)
-//		let tabItemIconView = UIImageView(frame: .zero)
-//		let tabIconLottieView = item.lottieView
+		let tabTitleLabel = UILabel(frame: .zero).then {
+			$0.tag = 12
+			$0.text = item.title
+			$0.textColor = .lightGray
+			$0.textAlignment = .center
+			$0.translatesAutoresizingMaskIntoConstraints = false
+			$0.clipsToBounds = true
+		}
+
+		let tabItemView = UIView(frame: .zero).then {
+			$0.tag = 11
+			$0.backgroundColor = .clear
+			$0.addSubview(tabTitleLabel)
+			$0.translatesAutoresizingMaskIntoConstraints = false
+			$0.clipsToBounds = true
+			$0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:))))
+		}
 
 		tabItemView.tag = 11
 		tabTitleLabel.tag = 12
 //		tabIconLottieView.tag = 13
-
-		tabTitleLabel.text = item.title
-		tabTitleLabel.textColor = .lightGray
-		tabTitleLabel.textAlignment = .center
-		tabTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-		tabTitleLabel.clipsToBounds = true
 
 //		tabItemIconView.image = item.iconImage.withRenderingMode(.automatic)	// 이거 머지??
 //		tabItemIconView.image = item.iconImage
@@ -92,25 +105,14 @@ class BottomTabNavigationMenu: UIView {
 //		tabIconLottieView.translatesAutoresizingMaskIntoConstraints = false
 //		tabIconLottieView.clipsToBounds = true
 
-		tabItemView.backgroundColor = .clear
-		tabItemView.addSubview(tabTitleLabel)
+//		tabItemView.addSubview(tabItemIconView)
 //		tabItemView.addSubview(tabIconLottieView)
-		tabItemView.translatesAutoresizingMaskIntoConstraints = false
-		tabItemView.clipsToBounds = true
 
-		NSLayoutConstraint.activate([
-//			tabIconLottieView.heightAnchor.constraint(equalToConstant: self.iconViewHeight),
-//			tabIconLottieView.widthAnchor.constraint(equalToConstant: self.iconViewHeight),
-//			tabIconLottieView.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
-//			tabIconLottieView.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 8),
-
-			tabTitleLabel.heightAnchor.constraint(equalToConstant: 15),
-			tabTitleLabel.centerXAnchor.constraint(equalTo: tabItemView.centerXAnchor),
-			tabTitleLabel.topAnchor.constraint(equalTo: tabItemView.topAnchor, constant: 20)
-//			tabTitleLabel.topAnchor.constraint(equalTo: tabIconLottieView.bottomAnchor, constant: 4)
-		])
-
-		tabItemView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:))))
+		tabTitleLabel.snp.makeConstraints { make in
+			make.top.equalTo(tabItemView).offset(20)
+			make.centerX.equalTo(tabItemView)
+			make.height.equalTo(15)
+		}
 
 		return tabItemView
 	}
