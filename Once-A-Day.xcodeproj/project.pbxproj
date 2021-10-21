@@ -18,6 +18,8 @@
 		439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 439E4275271BCAE70092CC00 /* .swiftlint.yml */; };
 		439E4285271BE5740092CC00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 439E4284271BE5740092CC00 /* SnapKit */; };
 		439E428B271BF67C0092CC00 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 439E428A271BF67C0092CC00 /* Then */; };
+		43C5BA802721A16100EC01BE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BA7F2721A16100EC01BE /* Realm */; };
+		43C5BA822721A16100EC01BE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BA812721A16100EC01BE /* RealmSwift */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -77,10 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C5BA822721A16100EC01BE /* RealmSwift in Frameworks */,
 				48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */,
 				439E428B271BF67C0092CC00 /* Then in Frameworks */,
 				439E4285271BE5740092CC00 /* SnapKit in Frameworks */,
 				43FE71D5271C576C0053DBE3 /* Lottie in Frameworks */,
+				43C5BA802721A16100EC01BE /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +305,8 @@
 				439E4284271BE5740092CC00 /* SnapKit */,
 				439E428A271BF67C0092CC00 /* Then */,
 				43FE71D4271C576C0053DBE3 /* Lottie */,
+				43C5BA7F2721A16100EC01BE /* Realm */,
+				43C5BA812721A16100EC01BE /* RealmSwift */,
 			);
 			productName = "Once-A-Day";
 			productReference = 436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */;
@@ -379,6 +385,7 @@
 				439E4283271BE5740092CC00 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				439E4289271BF67C0092CC00 /* XCRemoteSwiftPackageReference "Then" */,
 				43FE71D3271C576C0053DBE3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				43C5BA7E2721A16000EC01BE /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 436FE41C271B1EBE00DA5CBF /* Products */;
 			projectDirPath = "";
@@ -868,6 +875,14 @@
 				minimumVersion = 2.7.0;
 			};
 		};
+		43C5BA7E2721A16000EC01BE /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		43FE71D3271C576C0053DBE3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -888,6 +903,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 439E4289271BF67C0092CC00 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		43C5BA7F2721A16100EC01BE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43C5BA7E2721A16000EC01BE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		43C5BA812721A16100EC01BE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43C5BA7E2721A16000EC01BE /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 		43FE71D4271C576C0053DBE3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
