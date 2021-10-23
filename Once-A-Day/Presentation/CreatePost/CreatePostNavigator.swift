@@ -1,5 +1,5 @@
 //
-//  TimeLineViewNavigator.swift
+//  CreatePostNavigator.swift
 //  Once-A-Day
 //
 //  Created by Jongho Lee on 2021/10/23.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol TimeLineViewNavigator {
-	func toTimeLineView()
+protocol CreatePostNavigator {
+	func toCreatePost()
 }
 
-class DefaultTimeLineViewNavigator: TimeLineViewNavigator {
+class DefaultCreatePostNavigator: CreatePostNavigator {
 
 	private let navigationController: UINavigationController
 
@@ -19,8 +19,8 @@ class DefaultTimeLineViewNavigator: TimeLineViewNavigator {
 		self.navigationController = navigationController
 	}
 
-	func toTimeLineView() {
-		let vc = TimeLineViewController()
+	func toCreatePost() {
+		let vc = CreatePostViewController()
 		navigationController.pushViewController(vc, animated: false)
 	}
 }

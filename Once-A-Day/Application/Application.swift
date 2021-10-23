@@ -14,14 +14,19 @@ final class Application {
 		let baseTabBarviewController = BaseTabBarViewController()
 
 		let timeLineNavigationController = UINavigationController()
-		let timeLineNavigator = DefaultTimeLineViewNavigator(navigationController: timeLineNavigationController)
+		let timeLineNavigator = DefaultTimeLineNavigator(navigationController: timeLineNavigationController)
+
+		let createPostNavigationController = UINavigationController()
+		let createPostNavigator = DefaultCreatePostNavigator(navigationController: createPostNavigationController)
 
 		baseTabBarviewController.viewControllers = [
-			timeLineNavigationController
+			timeLineNavigationController,
+			createPostNavigationController
 		]
 
 		window.rootViewController = baseTabBarviewController
 
 		timeLineNavigator.toTimeLineView()
+		createPostNavigator.toCreatePost()
 	}
 }
