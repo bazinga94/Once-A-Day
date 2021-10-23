@@ -30,6 +30,8 @@
 		43C5BA9627241AD700EC01BE /* TimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C5BA9427241AD700EC01BE /* TimeLineViewController.xib */; };
 		43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BA9727241B0700EC01BE /* TimeLineViewModel.swift */; };
 		43C5BA9A27241B2600EC01BE /* TimeLineViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BA9927241B2600EC01BE /* TimeLineViewNavigator.swift */; };
+		43C5BA9E2724211F00EC01BE /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */; };
+		43C5BA9F2724211F00EC01BE /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -77,6 +79,8 @@
 		43C5BA9427241AD700EC01BE /* TimeLineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineViewController.xib; sourceTree = "<group>"; };
 		43C5BA9727241B0700EC01BE /* TimeLineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewModel.swift; sourceTree = "<group>"; };
 		43C5BA9927241B2600EC01BE /* TimeLineViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewNavigator.swift; sourceTree = "<group>"; };
+		43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
 		43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItemType.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		436FE46A271B282E00DA5CBF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				43C5BA9B272420FD00EC01BE /* CreatePost */,
 				43C5BA9027241A7100EC01BE /* TimeLine */,
 				43FE71C9271C53970053DBE3 /* TabBar */,
 			);
@@ -258,6 +263,15 @@
 				43C5BA9927241B2600EC01BE /* TimeLineViewNavigator.swift */,
 			);
 			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		43C5BA9B272420FD00EC01BE /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */,
+				43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */,
+			);
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
 		43FE71C9271C53970053DBE3 /* TabBar */ = {
@@ -427,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */,
+				43C5BA9F2724211F00EC01BE /* CreatePostViewController.xib in Resources */,
 				43C5BA9627241AD700EC01BE /* TimeLineViewController.xib in Resources */,
 				436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */,
 				436FE42B271B1EBF00DA5CBF /* Assets.xcassets in Resources */,
@@ -548,6 +563,7 @@
 				436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */,
 				436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */,
 				43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */,
+				43C5BA9E2724211F00EC01BE /* CreatePostViewController.swift in Sources */,
 				43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */,
 				43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */,
 				43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */,
@@ -721,6 +737,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWC7QPX692;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				INFOPLIST_FILE = "Once-A-Day/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -742,6 +759,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UWC7QPX692;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				INFOPLIST_FILE = "Once-A-Day/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
