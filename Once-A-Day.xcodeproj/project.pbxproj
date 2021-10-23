@@ -260,18 +260,10 @@
 			path = TimeLine;
 			sourceTree = "<group>";
 		};
-		43FE71C7271C529A0053DBE3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		43FE71C9271C53970053DBE3 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				43FE71C7271C529A0053DBE3 /* View */,
+				43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";

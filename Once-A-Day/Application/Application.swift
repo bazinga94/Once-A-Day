@@ -11,7 +11,6 @@ final class Application {
 	static let shared = Application()
 
 	func configureMainInterface(in window: UIWindow) {
-
 		let viewController = BaseTabBarViewController()
 		window.rootViewController = viewController
 	}
