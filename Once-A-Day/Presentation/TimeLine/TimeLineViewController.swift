@@ -27,6 +27,7 @@ class TimeLineViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		collectionView.delegate = self		// 이게 맞나...?
 		addSubviews()
 		activateConstraints()
 		bindViewModel()
@@ -34,6 +35,11 @@ class TimeLineViewController: UIViewController {
 }
 
 private extension TimeLineViewController {
+	enum Constant {
+		static let inset: CGFloat = 0
+		static let minimumLineSpacing: CGFloat = 10
+		static let minimumInteritemSpacing: CGFloat = 0
+	}
 
 	func addSubviews() {
 		self.view.addSubview(collectionView)
@@ -54,6 +60,23 @@ private extension TimeLineViewController {
 				cell.configure(data: viewModel)
 			}
 			.disposed(by: disposeBag)
+	}
+}
 
+extension TimeLineViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return UIEdgeInsets(top: Constant.inset, left: Constant.inset, bottom: Constant.inset, right: Constant.inset)
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return Constant.minimumLineSpacing
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return Constant.minimumInteritemSpacing
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: collectionView.bounds.width, height: 80)
 	}
 }
