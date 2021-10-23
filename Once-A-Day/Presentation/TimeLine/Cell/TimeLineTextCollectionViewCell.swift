@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TimeLineTextCollectionViewCell: UICollectionViewCell {
 
@@ -13,5 +15,9 @@ class TimeLineTextCollectionViewCell: UICollectionViewCell {
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
+	}
+
+	func configure(data: TimeLineTextCellModel) {
+		textLabel.text = data.content
 	}
 }

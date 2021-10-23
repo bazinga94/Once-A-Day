@@ -35,6 +35,8 @@
 		43C5BAB027244BEC00EC01BE /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BAAF27244BEC00EC01BE /* RxTest */; };
 		43C5BAB42724513600EC01BE /* TimeLineTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */; };
 		43C5BAB52724513600EC01BE /* TimeLineTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */; };
+		43C5BAB72724589100EC01BE /* TimeLineTextCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAB62724589100EC01BE /* TimeLineTextCellModel.swift */; };
+		43C5BABA27245A4A00EC01BE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAB927245A4A00EC01BE /* Reusable.swift */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -87,6 +89,8 @@
 		43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostNavigator.swift; sourceTree = "<group>"; };
 		43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineTextCollectionViewCell.xib; sourceTree = "<group>"; };
+		43C5BAB62724589100EC01BE /* TimeLineTextCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTextCellModel.swift; sourceTree = "<group>"; };
+		43C5BAB927245A4A00EC01BE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
 		43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItemType.swift; sourceTree = "<group>"; };
@@ -167,7 +171,8 @@
 				436FE471271B293E00DA5CBF /* Resources */,
 				436FE46E271B285100DA5CBF /* SupportingFiles */,
 				436FE470271B28E100DA5CBF /* CoreData */,
-				43FE71D0271C559B0053DBE3 /* Common */,
+				43FE71D0271C559B0053DBE3 /* Component */,
+				43C5BAB827245A2E00EC01BE /* Utility */,
 				436FE46D271B284600DA5CBF /* Extensions */,
 				436FE46A271B282E00DA5CBF /* Presentation */,
 				436FE46B271B283900DA5CBF /* Domain */,
@@ -287,8 +292,17 @@
 			children = (
 				43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */,
 				43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */,
+				43C5BAB62724589100EC01BE /* TimeLineTextCellModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		43C5BAB827245A2E00EC01BE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BAB927245A4A00EC01BE /* Reusable.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		43FE71C9271C53970053DBE3 /* TabBar */ = {
@@ -299,13 +313,13 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		43FE71D0271C559B0053DBE3 /* Common */ = {
+		43FE71D0271C559B0053DBE3 /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */,
 				43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */,
 			);
-			path = Common;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		B457DDD3A3781B5D32400AB4 /* Frameworks */ = {
@@ -585,10 +599,12 @@
 				43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */,
 				43C5BA9E2724211F00EC01BE /* CreatePostViewController.swift in Sources */,
 				43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */,
+				43C5BABA27245A4A00EC01BE /* Reusable.swift in Sources */,
 				43C5BAB42724513600EC01BE /* TimeLineTextCollectionViewCell.swift in Sources */,
 				43C5BAA527243C2D00EC01BE /* CreatePostNavigator.swift in Sources */,
 				43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */,
 				43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */,
+				43C5BAB72724589100EC01BE /* TimeLineTextCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

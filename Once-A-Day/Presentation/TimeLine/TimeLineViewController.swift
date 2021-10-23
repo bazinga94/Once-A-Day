@@ -60,4 +60,9 @@ private extension TimeLineViewController {
 			make.top.equalTo(self.view).offset(60)
 		}
 	}
+
+	func bindViewModel() {
+		Observable.of([TimeLineTextCellModel(content: "1"), TimeLineTextCellModel("2"), TimeLineTextCellModel(content: "3")])
+			.asD
+	}
 }
