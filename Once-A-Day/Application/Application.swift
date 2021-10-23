@@ -11,7 +11,17 @@ final class Application {
 	static let shared = Application()
 
 	func configureMainInterface(in window: UIWindow) {
-		let viewController = BaseTabBarViewController()
-		window.rootViewController = viewController
+		let baseTabBarviewController = BaseTabBarViewController()
+
+		let timeLineNavigationController = UINavigationController()
+		let timeLineNavigator = DefaultTimeLineViewNavigator(navigationController: timeLineNavigationController)
+
+		baseTabBarviewController.viewControllers = [
+			timeLineNavigationController
+		]
+
+		window.rootViewController = baseTabBarviewController
+
+		timeLineNavigator.toTimeLineView()
 	}
 }

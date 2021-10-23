@@ -11,11 +11,13 @@ import Then
 import SnapKit
 
 class BaseTabBarViewController: UITabBarController {
-	private var customTabBar: BottomTabNavigationMenu! = .init().then {
+	private var customTabBar: BottomTabNavigationMenu = .init().then {
 		$0.translatesAutoresizingMaskIntoConstraints = false
 		$0.clipsToBounds = true
 	}
 	private let tabBarHeight: CGFloat = 120.0
+
+	var bottomTabBarItems: [BottomTabBarItemType] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,16 +27,16 @@ class BaseTabBarViewController: UITabBarController {
 
 	private func loadTabBar() {
 		tabBar.isHidden = true
-		let sampleViewController = UIViewController().then {
-			$0.view.backgroundColor = .init(red: 177/255, green: 156/255, blue: 217/255, alpha: 1.0)
-		}
+//		let sampleViewController = UIViewController().then {
+//			$0.view.backgroundColor = .init(red: 177/255, green: 156/255, blue: 217/255, alpha: 1.0)
+//		}
 
-		let firstItem = BottomTabBarItem(title: "혜윤아", viewController: sampleViewController)
-		let secondItem = BottomTabBarItem(title: "오늘도", viewController: sampleViewController)
-		let thirdItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
-		let fourthItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)
-
-		let tabBarItems: [BottomTabBarItemType] = [firstItem, secondItem, thirdItem, fourthItem]		// tab을 추가하고 싶으면 여기에 Item을 추가하면 된다.
+//		let firstItem = BottomTabBarItem(title: "혜윤아", viewController: sampleViewController)
+//		let secondItem = BottomTabBarItem(title: "오늘도", viewController: sampleViewController)
+//		let thirdItem = BottomTabBarItem(title: "화이팅", viewController: sampleViewController)
+//		let fourthItem = BottomTabBarItem(title: "🔥", viewController: sampleViewController)
+//
+		let tabBarItems: [BottomTabBarItemType] = [BottomTabBarItem(title: "Timeline"), BottomTabBarItem(title: "Post")]
 		self.setupCustomTabMenu(tabBarItems)
 		self.setupBlurEffectView()
 		self.selectedIndex = 0	// 초기 index는 0
@@ -58,7 +60,6 @@ class BaseTabBarViewController: UITabBarController {
 
 	private func setupCustomTabMenu(_ menuItems: [BottomTabBarItemType]) {
 		let frame = tabBar.frame
-		var viewControllers: [UIViewController] = []
 
 		self.customTabBar.frame = frame
 		self.customTabBar.menuItems = menuItems
@@ -71,9 +72,6 @@ class BaseTabBarViewController: UITabBarController {
 			make.trailing.equalTo(tabBar)
 			make.height.equalTo(self.tabBarHeight)
 		}
-
-		menuItems.forEach { viewControllers.append($0.viewController) }
-		self.viewControllers = viewControllers
 	}
 
 	func changeTab(index: Int) {

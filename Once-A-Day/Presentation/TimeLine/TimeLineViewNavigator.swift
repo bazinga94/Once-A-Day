@@ -5,7 +5,6 @@
 //  Created by Jongho Lee on 2021/10/23.
 //
 
-import Foundation
 import UIKit
 
 protocol TimeLineViewNavigator {
