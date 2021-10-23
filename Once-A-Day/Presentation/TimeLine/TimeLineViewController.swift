@@ -6,49 +6,34 @@
 //
 
 import UIKit
+import RxSwift
 
 class TimeLineViewController: UIViewController {
 
-	private var collectionView: UICollectionView = UICollectionView(frame: .zero).then {
-		$0.translatesAutoresizingMaskIntoConstraints = false
-		$0.backgroundColor = .clear
-		$0.showsVerticalScrollIndicator = false
-	}
+	private let disposeBag = DisposeBag()
 
-	private var collectionViewFlowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout().then {
-		$0.scrollDirection = .vertical
-	}
+	private var collectionView: UICollectionView = {
+		let collectionViewFlowLayout = UICollectionViewFlowLayout().then {
+			$0.scrollDirection = .vertical
+		}
+		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout).then {
+			$0.translatesAutoresizingMaskIntoConstraints = false
+			$0.backgroundColor = .clear
+			$0.showsVerticalScrollIndicator = false
+			$0.registerByXib(type: TimeLineTextCollectionViewCell.self)
+		}
+		return collectionView
+	}()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		addSubviews()
 		activateConstraints()
+		bindViewModel()
 	}
 }
 
-//extension TimeLineViewController: UICollectionViewDataSource {
-//	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//		<#code#>
-//	}
-//
-//	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//		<#code#>
-//	}
-//}
-//
-//extension TimeLineViewController: UICollectionViewDelegateFlowLayout {
-//
-//}
-//
-//extension TimeLineViewController: UICollectionViewDelegate {
-//
-//}
-
 private extension TimeLineViewController {
-//	func configureCollectionView() {
-//		collectionView.delegate = self
-//		collectionView.dataSource = self
-//	}
 
 	func addSubviews() {
 		self.view.addSubview(collectionView)
@@ -62,7 +47,13 @@ private extension TimeLineViewController {
 	}
 
 	func bindViewModel() {
-		Observable.of([TimeLineTextCellModel(content: "1"), TimeLineTextCellModel("2"), TimeLineTextCellModel(content: "3")])
-			.asD
+		let textObservable: Observable<[TimeLineTextCellModel]> = Observable.of([TimeLineTextCellModel(content: "1"), TimeLineTextCellModel(content: "2"), TimeLineTextCellModel(content: "3")])
+		textObservable
+			.asDriverOnErrorJustComplete()
+			.drive(collectionView.rx.items(cellIdentifier: TimeLineTextCollectionViewCell.reuseID, cellType: TimeLineTextCollectionViewCell.self)) { collectionView, viewModel, cell in
+				cell.configure(data: viewModel)
+			}
+			.disposed(by: disposeBag)
+
 	}
 }

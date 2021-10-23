@@ -19,24 +19,4 @@ extension Reusable {
 
 extension UITableViewCell: Reusable {}
 
-extension UITableView {
-	func dequeueReusableCell<T>(ofType cellType: T.Type = T.self, at indexPath: IndexPath) -> T where T: UITableViewCell {
-		guard let cell = dequeueReusableCell(withIdentifier: cellType.reuseID,
-											 for: indexPath) as? T else {
-			fatalError()
-		}
-		return cell
-	}
-}
-
 extension UICollectionViewCell: Reusable {}
-
-extension UICollectionView {
-	func dequeueReusableCell<T>(ofType cellType: T.Type = T.self, at indexPath: IndexPath) -> T where T: UICollectionViewCell {
-		guard let cell = dequeueReusableCell(withReuseIdentifier: cellType.reuseID,
-											 for: indexPath) as? T else {
-			fatalError()
-		}
-		return cell
-	}
-}
