@@ -13,6 +13,7 @@ extension ObservableType {
 
 	func asDriverOnErrorJustComplete() -> Driver<Element> {
 		return asDriver { error in
+			print(error.localizedDescription)
 			return Driver.empty()
 		}
 	}
