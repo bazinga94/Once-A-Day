@@ -33,6 +33,8 @@
 		43C5BAAC27244BEC00EC01BE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BAAB27244BEC00EC01BE /* RxRelay */; };
 		43C5BAAE27244BEC00EC01BE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BAAD27244BEC00EC01BE /* RxSwift */; };
 		43C5BAB027244BEC00EC01BE /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 43C5BAAF27244BEC00EC01BE /* RxTest */; };
+		43C5BAB42724513600EC01BE /* TimeLineTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */; };
+		43C5BAB52724513600EC01BE /* TimeLineTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -83,6 +85,8 @@
 		43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostNavigator.swift; sourceTree = "<group>"; };
+		43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
 		43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItemType.swift; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 		43C5BA9027241A7100EC01BE /* TimeLine */ = {
 			isa = PBXGroup;
 			children = (
+				43C5BAB12724511200EC01BE /* Cell */,
 				43C5BA9327241AD700EC01BE /* TimeLineViewController.swift */,
 				43C5BA9427241AD700EC01BE /* TimeLineViewController.xib */,
 				43C5BA9727241B0700EC01BE /* TimeLineViewModel.swift */,
@@ -275,6 +280,15 @@
 				43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		43C5BAB12724511200EC01BE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BAB22724513500EC01BE /* TimeLineTextCollectionViewCell.swift */,
+				43C5BAB32724513500EC01BE /* TimeLineTextCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		43FE71C9271C53970053DBE3 /* TabBar */ = {
@@ -445,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C5BAB52724513600EC01BE /* TimeLineTextCollectionViewCell.xib in Resources */,
 				439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */,
 				43C5BA9F2724211F00EC01BE /* CreatePostViewController.xib in Resources */,
 				43C5BA9627241AD700EC01BE /* TimeLineViewController.xib in Resources */,
@@ -570,6 +585,7 @@
 				43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */,
 				43C5BA9E2724211F00EC01BE /* CreatePostViewController.swift in Sources */,
 				43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */,
+				43C5BAB42724513600EC01BE /* TimeLineTextCollectionViewCell.swift in Sources */,
 				43C5BAA527243C2D00EC01BE /* CreatePostNavigator.swift in Sources */,
 				43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */,
 				43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */,
