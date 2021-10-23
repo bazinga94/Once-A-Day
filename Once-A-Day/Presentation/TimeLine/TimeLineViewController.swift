@@ -50,7 +50,7 @@ private extension TimeLineViewController {
 		let textObservable: Observable<[TimeLineTextCellModel]> = Observable.of([TimeLineTextCellModel(content: "1"), TimeLineTextCellModel(content: "2"), TimeLineTextCellModel(content: "3")])
 		textObservable
 			.asDriverOnErrorJustComplete()
-			.drive(collectionView.rx.items(cellIdentifier: TimeLineTextCollectionViewCell.reuseID, cellType: TimeLineTextCollectionViewCell.self)) { collectionView, viewModel, cell in
+			.drive(collectionView.rx.items(cellIdentifier: TimeLineTextCollectionViewCell.reuseID, cellType: TimeLineTextCollectionViewCell.self)) { _, viewModel, cell in
 				cell.configure(data: viewModel)
 			}
 			.disposed(by: disposeBag)

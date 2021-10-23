@@ -27,8 +27,8 @@ excluded: # SwiftLint 검사에서 제외할 파일 경로
 
 # Rule parameters
 line_length:
-  - 150 #warning
-  - 300 #error
+  - 300 #warning
+  - 500 #error
 
 identifier_name:
   min_length:
