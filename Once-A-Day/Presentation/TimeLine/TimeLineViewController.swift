@@ -25,6 +25,8 @@ class TimeLineViewController: UIViewController {
 		return collectionView
 	}()
 
+	var viewModel: TimeLineViewModel!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		collectionView.delegate = self		// 이게 맞나...?
@@ -53,9 +55,11 @@ private extension TimeLineViewController {
 	}
 
 	func bindViewModel() {
-		let textObservable: Observable<[TimeLineTextCellModel]> = Observable.of([TimeLineTextCellModel(content: "1"), TimeLineTextCellModel(content: "2"), TimeLineTextCellModel(content: "3")])
-		textObservable
-			.asDriverOnErrorJustComplete()
+
+		let input = TimeLineViewModel.Input()
+		let output = viewModel.transform(input: input)
+
+		output.timeLineContents
 			.drive(collectionView.rx.items(cellIdentifier: TimeLineTextCollectionViewCell.reuseID, cellType: TimeLineTextCollectionViewCell.self)) { _, viewModel, cell in
 				cell.configure(data: viewModel)
 			}
