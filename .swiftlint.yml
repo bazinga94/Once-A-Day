@@ -1,5 +1,6 @@
 disabled_rules: # Default Rules에서 비활성화할 규칙
 
+#	(예시)
 #	라인 뒤에 공백이 없어야 합니다. https://realm.github.io/SwiftLint/trailing_whitespace.html
 #	- trailing_whitespace
 
@@ -9,7 +10,11 @@ disabled_rules: # Default Rules에서 비활성화할 규칙
 #	강제 언래핑은 피해야합니다. https://realm.github.io/SwiftLint/force_unwrapping.html
 #	- force_unwrapping
 
-#	- line_length
+#	TODO 주석 작성을 위해
+  - todo
+
+#	tab을 이상하게 인식하는듯..
+  - vertical_parameter_alignment
 
 opt_in_rules:
 #	.count==0 보다는 .isEmpty를 사용하는 것이 좋습니다. https://realm.github.io/SwiftLint/empty_count.html
