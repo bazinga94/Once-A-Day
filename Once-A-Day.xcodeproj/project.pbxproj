@@ -46,6 +46,7 @@
 		43C5BACB27258A2D00EC01BE /* TimeLineUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */; };
 		43C5BACF27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */; };
 		43C5BAD127258E0C00EC01BE /* TimeLineUseCaseByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */; };
+		43C5BAD42726F3DF00EC01BE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD32726F3DF00EC01BE /* Repository.swift */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -109,6 +110,7 @@
 		43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseProvider.swift; sourceTree = "<group>"; };
 		43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseProviderByRealm.swift; sourceTree = "<group>"; };
 		43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseByRealm.swift; sourceTree = "<group>"; };
+		43C5BAD32726F3DF00EC01BE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
 		43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarItemType.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				43C5BACD27258D5700EC01BE /* UseCases */,
+				43C5BAD22726F3AC00EC01BE /* Repository */,
 			);
 			path = RealmPlatform;
 			sourceTree = "<group>";
@@ -370,6 +373,14 @@
 				43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		43C5BAD22726F3AC00EC01BE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BAD32726F3DF00EC01BE /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		43FE71C9271C53970053DBE3 /* TabBar */ = {
@@ -664,6 +675,7 @@
 				43C5BA8F2724102500EC01BE /* Application.swift in Sources */,
 				43C5BA9A27241B2600EC01BE /* TimeLineNavigator.swift in Sources */,
 				436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */,
+				43C5BAD42726F3DF00EC01BE /* Repository.swift in Sources */,
 				43C5BABE2724611000EC01BE /* UITableView+Extension.swift in Sources */,
 				436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */,
 				43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */,
