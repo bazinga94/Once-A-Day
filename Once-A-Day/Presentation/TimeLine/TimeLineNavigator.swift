@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 protocol TimeLineNavigator {
 	func toTimeLineView()
