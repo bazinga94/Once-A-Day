@@ -17,6 +17,17 @@
 		43685B4A272AEA8F005B198A /* TimeLineContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC8272587D900EC01BE /* TimeLineContent.swift */; };
 		43685B4B272AEA8F005B198A /* TimeLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */; };
 		43685B4C272AEA8F005B198A /* TimeLineUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */; };
+		43685B56272AF05A005B198A /* RealmPlatform.docc in Sources */ = {isa = PBXBuildFile; fileRef = 43685B55272AF05A005B198A /* RealmPlatform.docc */; };
+		43685B5C272AF05A005B198A /* RealmPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B52272AF05A005B198A /* RealmPlatform.framework */; };
+		43685B63272AF05A005B198A /* RealmPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B62272AF05A005B198A /* RealmPlatformTests.swift */; };
+		43685B64272AF05A005B198A /* RealmPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 43685B54272AF05A005B198A /* RealmPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43685B67272AF05A005B198A /* RealmPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B52272AF05A005B198A /* RealmPlatform.framework */; };
+		43685B68272AF05A005B198A /* RealmPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B52272AF05A005B198A /* RealmPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43685B6F272AF0A6005B198A /* TimeLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD027258E0C00EC01BE /* TimeLineUseCase.swift */; };
+		43685B70272AF0A6005B198A /* TimeLineUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACE27258D9900EC01BE /* TimeLineUseCaseProvider.swift */; };
+		43685B71272AF0A6005B198A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD32726F3DF00EC01BE /* Repository.swift */; };
+		43685B72272AF229005B198A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B2C272AE874005B198A /* Domain.framework */; platformFilter = ios; };
+		43685B73272AF229005B198A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B2C272AE874005B198A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -50,9 +61,6 @@
 		43C5BABE2724611000EC01BE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BABD2724611000EC01BE /* UITableView+Extension.swift */; };
 		43C5BAC02724611E00EC01BE /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BABF2724611E00EC01BE /* UICollectionView+Extension.swift */; };
 		43C5BAC3272584F400EC01BE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC2272584F300EC01BE /* ViewModelType.swift */; };
-		43C5BACF27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */; };
-		43C5BAD127258E0C00EC01BE /* TimeLineUseCaseByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */; };
-		43C5BAD42726F3DF00EC01BE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD32726F3DF00EC01BE /* Repository.swift */; };
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
@@ -83,6 +91,34 @@
 			remoteGlobalIDString = 43685B2B272AE874005B198A;
 			remoteInfo = Domain;
 		};
+		43685B5D272AF05A005B198A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43685B51272AF05A005B198A;
+			remoteInfo = RealmPlatform;
+		};
+		43685B5F272AF05A005B198A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 436FE41A271B1EBE00DA5CBF;
+			remoteInfo = "Once-A-Day";
+		};
+		43685B65272AF05A005B198A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43685B51272AF05A005B198A;
+			remoteInfo = RealmPlatform;
+		};
+		43685B74272AF229005B198A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43685B2B272AE874005B198A;
+			remoteInfo = Domain;
+		};
 		436FE435271B1EBF00DA5CBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
@@ -107,6 +143,18 @@
 			dstSubfolderSpec = 10;
 			files = (
 				43685B42272AE874005B198A /* Domain.framework in Embed Frameworks */,
+				43685B68272AF05A005B198A /* RealmPlatform.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43685B76272AF229005B198A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43685B73272AF229005B198A /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +169,11 @@
 		43685B2F272AE874005B198A /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		43685B35272AE874005B198A /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43685B3C272AE874005B198A /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		43685B52272AF05A005B198A /* RealmPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43685B54272AF05A005B198A /* RealmPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmPlatform.h; sourceTree = "<group>"; };
+		43685B55272AF05A005B198A /* RealmPlatform.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RealmPlatform.docc; sourceTree = "<group>"; };
+		43685B5B272AF05A005B198A /* RealmPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43685B62272AF05A005B198A /* RealmPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPlatformTests.swift; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,8 +207,8 @@
 		43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCase.swift; sourceTree = "<group>"; };
 		43C5BAC8272587D900EC01BE /* TimeLineContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineContent.swift; sourceTree = "<group>"; };
 		43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseProvider.swift; sourceTree = "<group>"; };
-		43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseProviderByRealm.swift; sourceTree = "<group>"; };
-		43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseByRealm.swift; sourceTree = "<group>"; };
+		43C5BACE27258D9900EC01BE /* TimeLineUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCaseProvider.swift; sourceTree = "<group>"; };
+		43C5BAD027258E0C00EC01BE /* TimeLineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUseCase.swift; sourceTree = "<group>"; };
 		43C5BAD32726F3DF00EC01BE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabNavigationMenu.swift; sourceTree = "<group>"; };
@@ -185,6 +238,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43685B4F272AF05A005B198A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43685B72272AF229005B198A /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43685B58272AF05A005B198A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43685B5C272AF05A005B198A /* RealmPlatform.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		436FE418271B1EBE00DA5CBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +262,7 @@
 				43C5BAAE27244BEC00EC01BE /* RxSwift in Frameworks */,
 				43C5BA822721A16100EC01BE /* RealmSwift in Frameworks */,
 				48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */,
+				43685B67272AF05A005B198A /* RealmPlatform.framework in Frameworks */,
 				439E428B271BF67C0092CC00 /* Then in Frameworks */,
 				43C5BAAA27244BEC00EC01BE /* RxCocoa in Frameworks */,
 				439E4285271BE5740092CC00 /* SnapKit in Frameworks */,
@@ -242,6 +312,25 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
+		43685B53272AF05A005B198A /* RealmPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BACD27258D5700EC01BE /* UseCases */,
+				43C5BAD22726F3AC00EC01BE /* Repository */,
+				43685B54272AF05A005B198A /* RealmPlatform.h */,
+				43685B55272AF05A005B198A /* RealmPlatform.docc */,
+			);
+			path = RealmPlatform;
+			sourceTree = "<group>";
+		};
+		43685B61272AF05A005B198A /* RealmPlatformTests */ = {
+			isa = PBXGroup;
+			children = (
+				43685B62272AF05A005B198A /* RealmPlatformTests.swift */,
+			);
+			path = RealmPlatformTests;
+			sourceTree = "<group>";
+		};
 		436FE412271B1EBE00DA5CBF = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +340,8 @@
 				436FE442271B1EBF00DA5CBF /* Once-A-DayUITests */,
 				43685B2D272AE874005B198A /* Domain */,
 				43685B3B272AE874005B198A /* DomainTests */,
+				43685B53272AF05A005B198A /* RealmPlatform */,
+				43685B61272AF05A005B198A /* RealmPlatformTests */,
 				436FE41C271B1EBE00DA5CBF /* Products */,
 				C941792B539B0432554718C4 /* Pods */,
 				B457DDD3A3781B5D32400AB4 /* Frameworks */,
@@ -265,6 +356,8 @@
 				436FE43F271B1EBF00DA5CBF /* Once-A-DayUITests.xctest */,
 				43685B2C272AE874005B198A /* Domain.framework */,
 				43685B35272AE874005B198A /* DomainTests.xctest */,
+				43685B52272AF05A005B198A /* RealmPlatform.framework */,
+				43685B5B272AF05A005B198A /* RealmPlatformTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,7 +374,6 @@
 				43C5BAB827245A2E00EC01BE /* Utility */,
 				436FE46D271B284600DA5CBF /* Extensions */,
 				436FE46A271B282E00DA5CBF /* Presentation */,
-				43C5BACC27258A3600EC01BE /* RealmPlatform */,
 				436FE46C271B283E00DA5CBF /* Data */,
 			);
 			path = "Once-A-Day";
@@ -432,20 +524,11 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		43C5BACC27258A3600EC01BE /* RealmPlatform */ = {
-			isa = PBXGroup;
-			children = (
-				43C5BACD27258D5700EC01BE /* UseCases */,
-				43C5BAD22726F3AC00EC01BE /* Repository */,
-			);
-			path = RealmPlatform;
-			sourceTree = "<group>";
-		};
 		43C5BACD27258D5700EC01BE /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */,
-				43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */,
+				43C5BAD027258E0C00EC01BE /* TimeLineUseCase.swift */,
+				43C5BACE27258D9900EC01BE /* TimeLineUseCaseProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -509,6 +592,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43685B4D272AF05A005B198A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43685B64272AF05A005B198A /* RealmPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -549,6 +640,45 @@
 			productReference = 43685B35272AE874005B198A /* DomainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		43685B51272AF05A005B198A /* RealmPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43685B69272AF05A005B198A /* Build configuration list for PBXNativeTarget "RealmPlatform" */;
+			buildPhases = (
+				43685B4D272AF05A005B198A /* Headers */,
+				43685B4E272AF05A005B198A /* Sources */,
+				43685B4F272AF05A005B198A /* Frameworks */,
+				43685B50272AF05A005B198A /* Resources */,
+				43685B76272AF229005B198A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43685B75272AF229005B198A /* PBXTargetDependency */,
+			);
+			name = RealmPlatform;
+			productName = RealmPlatform;
+			productReference = 43685B52272AF05A005B198A /* RealmPlatform.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		43685B5A272AF05A005B198A /* RealmPlatformTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43685B6C272AF05A005B198A /* Build configuration list for PBXNativeTarget "RealmPlatformTests" */;
+			buildPhases = (
+				43685B57272AF05A005B198A /* Sources */,
+				43685B58272AF05A005B198A /* Frameworks */,
+				43685B59272AF05A005B198A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43685B5E272AF05A005B198A /* PBXTargetDependency */,
+				43685B60272AF05A005B198A /* PBXTargetDependency */,
+			);
+			name = RealmPlatformTests;
+			productName = RealmPlatformTests;
+			productReference = 43685B5B272AF05A005B198A /* RealmPlatformTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		436FE41A271B1EBE00DA5CBF /* Once-A-Day */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 436FE448271B1EBF00DA5CBF /* Build configuration list for PBXNativeTarget "Once-A-Day" */;
@@ -564,6 +694,7 @@
 			);
 			dependencies = (
 				43685B40272AE874005B198A /* PBXTargetDependency */,
+				43685B66272AF05A005B198A /* PBXTargetDependency */,
 			);
 			name = "Once-A-Day";
 			packageProductDependencies = (
@@ -638,6 +769,13 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 436FE41A271B1EBE00DA5CBF;
 					};
+					43685B51272AF05A005B198A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					43685B5A272AF05A005B198A = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 436FE41A271B1EBE00DA5CBF;
+					};
 					436FE41A271B1EBE00DA5CBF = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -676,6 +814,8 @@
 				436FE43E271B1EBF00DA5CBF /* Once-A-DayUITests */,
 				43685B2B272AE874005B198A /* Domain */,
 				43685B34272AE874005B198A /* DomainTests */,
+				43685B51272AF05A005B198A /* RealmPlatform */,
+				43685B5A272AF05A005B198A /* RealmPlatformTests */,
 			);
 		};
 /* End PBXProject section */
@@ -689,6 +829,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43685B33272AE874005B198A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43685B50272AF05A005B198A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43685B59272AF05A005B198A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -831,6 +985,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43685B4E272AF05A005B198A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43685B6F272AF0A6005B198A /* TimeLineUseCase.swift in Sources */,
+				43685B70272AF0A6005B198A /* TimeLineUseCaseProvider.swift in Sources */,
+				43685B71272AF0A6005B198A /* Repository.swift in Sources */,
+				43685B56272AF05A005B198A /* RealmPlatform.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43685B57272AF05A005B198A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43685B63272AF05A005B198A /* RealmPlatformTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		436FE417271B1EBE00DA5CBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,7 +1015,6 @@
 				43C5BA8F2724102500EC01BE /* Application.swift in Sources */,
 				43C5BA9A27241B2600EC01BE /* TimeLineNavigator.swift in Sources */,
 				436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */,
-				43C5BAD42726F3DF00EC01BE /* Repository.swift in Sources */,
 				43C5BABE2724611000EC01BE /* UITableView+Extension.swift in Sources */,
 				436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */,
 				43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */,
@@ -853,8 +1025,6 @@
 				43C5BAA527243C2D00EC01BE /* CreatePostNavigator.swift in Sources */,
 				43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */,
 				43C5BAC3272584F400EC01BE /* ViewModelType.swift in Sources */,
-				43C5BAD127258E0C00EC01BE /* TimeLineUseCaseByRealm.swift in Sources */,
-				43C5BACF27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift in Sources */,
 				43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */,
 				43C5BAB72724589100EC01BE /* TimeLineTextCellModel.swift in Sources */,
 			);
@@ -893,6 +1063,27 @@
 			isa = PBXTargetDependency;
 			target = 43685B2B272AE874005B198A /* Domain */;
 			targetProxy = 43685B3F272AE874005B198A /* PBXContainerItemProxy */;
+		};
+		43685B5E272AF05A005B198A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43685B51272AF05A005B198A /* RealmPlatform */;
+			targetProxy = 43685B5D272AF05A005B198A /* PBXContainerItemProxy */;
+		};
+		43685B60272AF05A005B198A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 436FE41A271B1EBE00DA5CBF /* Once-A-Day */;
+			targetProxy = 43685B5F272AF05A005B198A /* PBXContainerItemProxy */;
+		};
+		43685B66272AF05A005B198A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43685B51272AF05A005B198A /* RealmPlatform */;
+			targetProxy = 43685B65272AF05A005B198A /* PBXContainerItemProxy */;
+		};
+		43685B75272AF229005B198A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 43685B2B272AE874005B198A /* Domain */;
+			targetProxy = 43685B74272AF229005B198A /* PBXContainerItemProxy */;
 		};
 		436FE436271B1EBF00DA5CBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1026,6 +1217,122 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jongko.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Once-A-Day.app/Once-A-Day";
+			};
+			name = Release;
+		};
+		43685B6A272AF05A005B198A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UWC7QPX692;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jongko.RealmPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43685B6B272AF05A005B198A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UWC7QPX692;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jongko.RealmPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43685B6D272AF05A005B198A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UWC7QPX692;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jongko.RealmPlatformTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Once-A-Day.app/Once-A-Day";
+			};
+			name = Debug;
+		};
+		43685B6E272AF05A005B198A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UWC7QPX692;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jongko.RealmPlatformTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1303,6 +1610,24 @@
 			buildConfigurations = (
 				43685B48272AE875005B198A /* Debug */,
 				43685B49272AE875005B198A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43685B69272AF05A005B198A /* Build configuration list for PBXNativeTarget "RealmPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43685B6A272AF05A005B198A /* Debug */,
+				43685B6B272AF05A005B198A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43685B6C272AF05A005B198A /* Build configuration list for PBXNativeTarget "RealmPlatformTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43685B6D272AF05A005B198A /* Debug */,
+				43685B6E272AF05A005B198A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

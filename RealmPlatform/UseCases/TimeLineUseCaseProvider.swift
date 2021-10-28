@@ -1,5 +1,5 @@
 //
-//  TimeLineUseCaseProviderByRealm.swift
+//  TimeLineUseCaseProvider.swift
 //  Once-A-Day
 //
 //  Created by Jongho Lee on 2021/10/24.
@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-final class TimeLineUseCaseProviderByRealm: TimeLineUseCaseProvider {
+final class TimeLineUseCaseProvider: TimeLineUseCaseProvider {
 	// TODO: Framework화 하면 명명 변경
 	private let configuration: Realm.Configuration
 
@@ -19,6 +19,6 @@ final class TimeLineUseCaseProviderByRealm: TimeLineUseCaseProvider {
 	}
 
 	public func makeTimeLineUseCase() -> TimeLineUseCase {
-		return TimeLineUseCaseByRealm()
+		return TimeLineUseCase()
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  TimeLineUseCaseByRealm.swift
+//  TimeLineUseCase.swift
 //  Once-A-Day
 //
 //  Created by Jongho Lee on 2021/10/24.
@@ -9,7 +9,7 @@ import Domain
 import Foundation
 import RxSwift
 
-final class TimeLineUseCaseByRealm: TimeLineUseCase {
+final class TimeLineUseCase: TimeLineUseCase {
 
 	// TODO: Repository 생성
 
