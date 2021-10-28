@@ -14,6 +14,9 @@
 		43685B3E272AE874005B198A /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 43685B2E272AE874005B198A /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43685B41272AE874005B198A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B2C272AE874005B198A /* Domain.framework */; };
 		43685B42272AE874005B198A /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B2C272AE874005B198A /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43685B4A272AEA8F005B198A /* TimeLineContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC8272587D900EC01BE /* TimeLineContent.swift */; };
+		43685B4B272AEA8F005B198A /* TimeLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */; };
+		43685B4C272AEA8F005B198A /* TimeLineUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -47,9 +50,6 @@
 		43C5BABE2724611000EC01BE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BABD2724611000EC01BE /* UITableView+Extension.swift */; };
 		43C5BAC02724611E00EC01BE /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BABF2724611E00EC01BE /* UICollectionView+Extension.swift */; };
 		43C5BAC3272584F400EC01BE /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC2272584F300EC01BE /* ViewModelType.swift */; };
-		43C5BAC62725858100EC01BE /* TimeLineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */; };
-		43C5BAC9272587D900EC01BE /* TimeLineContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAC8272587D900EC01BE /* TimeLineContent.swift */; };
-		43C5BACB27258A2D00EC01BE /* TimeLineUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */; };
 		43C5BACF27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BACE27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift */; };
 		43C5BAD127258E0C00EC01BE /* TimeLineUseCaseByRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD027258E0C00EC01BE /* TimeLineUseCaseByRealm.swift */; };
 		43C5BAD42726F3DF00EC01BE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BAD32726F3DF00EC01BE /* Repository.swift */; };
@@ -816,6 +816,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43685B4A272AEA8F005B198A /* TimeLineContent.swift in Sources */,
+				43685B4B272AEA8F005B198A /* TimeLineUseCase.swift in Sources */,
+				43685B4C272AEA8F005B198A /* TimeLineUseCaseProvider.swift in Sources */,
 				43685B30272AE874005B198A /* Domain.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,14 +850,11 @@
 				43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */,
 				43C5BABA27245A4A00EC01BE /* Reusable.swift in Sources */,
 				43C5BAB42724513600EC01BE /* TimeLineTextCollectionViewCell.swift in Sources */,
-				43C5BACB27258A2D00EC01BE /* TimeLineUseCaseProvider.swift in Sources */,
 				43C5BAA527243C2D00EC01BE /* CreatePostNavigator.swift in Sources */,
 				43C5BA9827241B0700EC01BE /* TimeLineViewModel.swift in Sources */,
-				43C5BAC62725858100EC01BE /* TimeLineUseCase.swift in Sources */,
 				43C5BAC3272584F400EC01BE /* ViewModelType.swift in Sources */,
 				43C5BAD127258E0C00EC01BE /* TimeLineUseCaseByRealm.swift in Sources */,
 				43C5BACF27258D9900EC01BE /* TimeLineUseCaseProviderByRealm.swift in Sources */,
-				43C5BAC9272587D900EC01BE /* TimeLineContent.swift in Sources */,
 				43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */,
 				43C5BAB72724589100EC01BE /* TimeLineTextCellModel.swift in Sources */,
 			);
@@ -1154,6 +1154,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D74D31CF3E25A414FDD85AD /* Pods-Once-A-Day.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1176,6 +1177,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 711A41B040BA5D6717DFD432 /* Pods-Once-A-Day.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
