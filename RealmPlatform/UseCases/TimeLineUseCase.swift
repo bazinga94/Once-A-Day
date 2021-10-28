@@ -9,7 +9,7 @@ import Domain
 import Foundation
 import RxSwift
 
-final class TimeLineUseCase: TimeLineUseCase {
+final class TimeLineUseCase: Domain.TimeLineUseCase {
 
 	// TODO: Repository 생성
 
