@@ -40,6 +40,7 @@
 		43685B99272EC808005B198A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B98272EC808005B198A /* Lottie */; };
 		43685B9B272EC80E005B198A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9A272EC80E005B198A /* SnapKit */; };
 		43685B9D272EC814005B198A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9C272EC814005B198A /* Then */; };
+		43685BA8272ED20A005B198A /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA7272ED20A005B198A /* Rx+Extension.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -182,6 +183,7 @@
 		43685B8F272EB905005B198A /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
 		43685B91272EB923005B198A /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		43685B95272EC137005B198A /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		43685BA7272ED20A005B198A /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		43685B93272EC115005B198A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				43685BA6272ED1F8005B198A /* Extensions */,
 				43685B94272EC129005B198A /* RxUnits */,
 			);
 			path = Utility;
@@ -373,6 +376,14 @@
 				43685B95272EC137005B198A /* RunLoopThreadScheduler.swift */,
 			);
 			path = RxUnits;
+			sourceTree = "<group>";
+		};
+		43685BA6272ED1F8005B198A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43685BA7272ED20A005B198A /* Rx+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		436FE412271B1EBE00DA5CBF = {
@@ -1037,6 +1048,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43685BA8272ED20A005B198A /* Rx+Extension.swift in Sources */,
 				43685B6F272AF0A6005B198A /* TimeLineUseCase.swift in Sources */,
 				43685B70272AF0A6005B198A /* TimeLineUseCaseProvider.swift in Sources */,
 				43685B92272EB923005B198A /* RealmRepresentable.swift in Sources */,
