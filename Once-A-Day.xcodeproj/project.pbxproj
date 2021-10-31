@@ -33,6 +33,7 @@
 		43685B86272E8C72005B198A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B85272E8C72005B198A /* RxCocoa */; };
 		43685B88272E8C72005B198A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B87272E8C72005B198A /* RxRelay */; };
 		43685B8A272E8C72005B198A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B89272E8C72005B198A /* RxSwift */; };
+		43685B8D272EB462005B198A /* RMTimeLineContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B8C272EB462005B198A /* RMTimeLineContent.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -174,6 +175,7 @@
 		43685B55272AF05A005B198A /* RealmPlatform.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RealmPlatform.docc; sourceTree = "<group>"; };
 		43685B5B272AF05A005B198A /* RealmPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43685B62272AF05A005B198A /* RealmPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPlatformTests.swift; sourceTree = "<group>"; };
+		43685B8C272EB462005B198A /* RMTimeLineContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTimeLineContent.swift; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		43685B53272AF05A005B198A /* RealmPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				43685B8B272EB429005B198A /* Entities */,
 				43C5BACD27258D5700EC01BE /* UseCases */,
 				43C5BAD22726F3AC00EC01BE /* Repository */,
 				43685B54272AF05A005B198A /* RealmPlatform.h */,
@@ -329,6 +332,14 @@
 				43685B62272AF05A005B198A /* RealmPlatformTests.swift */,
 			);
 			path = RealmPlatformTests;
+			sourceTree = "<group>";
+		};
+		43685B8B272EB429005B198A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				43685B8C272EB462005B198A /* RMTimeLineContent.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		436FE412271B1EBE00DA5CBF = {
@@ -995,6 +1006,7 @@
 			files = (
 				43685B6F272AF0A6005B198A /* TimeLineUseCase.swift in Sources */,
 				43685B70272AF0A6005B198A /* TimeLineUseCaseProvider.swift in Sources */,
+				43685B8D272EB462005B198A /* RMTimeLineContent.swift in Sources */,
 				43685B71272AF0A6005B198A /* Repository.swift in Sources */,
 				43685B56272AF05A005B198A /* RealmPlatform.docc in Sources */,
 			);

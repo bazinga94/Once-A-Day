@@ -8,9 +8,9 @@
 import Foundation
 
 public struct TimeLineContent {
-	public var textContent: String
+	public var text: String
 
-	public init(textContent: String) {
-		self.textContent = textContent
+	public init(text: String) {
+		self.text = text
 	}
 }

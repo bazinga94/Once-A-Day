@@ -12,6 +12,6 @@ struct TimeLineTextCellModel {
 	var content: String
 
 	init(timeLineContent: TimeLineContent) {
-		self.content = timeLineContent.textContent
+		self.content = timeLineContent.text
 	}
 }
