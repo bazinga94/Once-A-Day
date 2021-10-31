@@ -37,6 +37,9 @@
 		43685B90272EB905005B198A /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B8F272EB905005B198A /* DomainConvertibleType.swift */; };
 		43685B92272EB923005B198A /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B91272EB923005B198A /* RealmRepresentable.swift */; };
 		43685B96272EC137005B198A /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B95272EC137005B198A /* RunLoopThreadScheduler.swift */; };
+		43685B99272EC808005B198A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B98272EC808005B198A /* Lottie */; };
+		43685B9B272EC80E005B198A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9A272EC80E005B198A /* SnapKit */; };
+		43685B9D272EC814005B198A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9C272EC814005B198A /* Then */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -45,8 +48,6 @@
 		436FE444271B1EBF00DA5CBF /* Once_A_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE443271B1EBF00DA5CBF /* Once_A_DayUITests.swift */; };
 		436FE489271B2C4C00DA5CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436FE42C271B1EBF00DA5CBF /* LaunchScreen.storyboard */; };
 		439E4276271BCAE70092CC00 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 439E4275271BCAE70092CC00 /* .swiftlint.yml */; };
-		439E4285271BE5740092CC00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 439E4284271BE5740092CC00 /* SnapKit */; };
-		439E428B271BF67C0092CC00 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 439E428A271BF67C0092CC00 /* Then */; };
 		43C5BA8F2724102500EC01BE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BA8E2724102400EC01BE /* Application.swift */; };
 		43C5BA9527241AD700EC01BE /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C5BA9327241AD700EC01BE /* TimeLineViewController.swift */; };
 		43C5BA9627241AD700EC01BE /* TimeLineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C5BA9427241AD700EC01BE /* TimeLineViewController.xib */; };
@@ -68,7 +69,6 @@
 		43FE71CD271C54260053DBE3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CC271C54260053DBE3 /* BaseTabBarViewController.swift */; };
 		43FE71CF271C555B0053DBE3 /* BottomTabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71CE271C555B0053DBE3 /* BottomTabNavigationMenu.swift */; };
 		43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE71D1271C55C50053DBE3 /* BottomTabBarItemType.swift */; };
-		43FE71D5271C576C0053DBE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 43FE71D4271C576C0053DBE3 /* Lottie */; };
 		48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3BE14367A748BB9E1B651 /* Pods_Once_A_Day.framework */; };
 		E7DABC9E40D830E4F5F85685 /* Pods_Once_A_DayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E6AEFF3B3B1E63CF42D1D /* Pods_Once_A_DayTests.framework */; };
 /* End PBXBuildFile section */
@@ -272,11 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				43685B41272AE874005B198A /* Domain.framework in Frameworks */,
+				43685B9D272EC814005B198A /* Then in Frameworks */,
 				48AEEC2E9B4BA9961D32C904 /* Pods_Once_A_Day.framework in Frameworks */,
 				43685B67272AF05A005B198A /* RealmPlatform.framework in Frameworks */,
-				439E428B271BF67C0092CC00 /* Then in Frameworks */,
-				439E4285271BE5740092CC00 /* SnapKit in Frameworks */,
-				43FE71D5271C576C0053DBE3 /* Lottie in Frameworks */,
+				43685B99272EC808005B198A /* Lottie in Frameworks */,
+				43685B9B272EC80E005B198A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,9 +751,9 @@
 			);
 			name = "Once-A-Day";
 			packageProductDependencies = (
-				439E4284271BE5740092CC00 /* SnapKit */,
-				439E428A271BF67C0092CC00 /* Then */,
-				43FE71D4271C576C0053DBE3 /* Lottie */,
+				43685B98272EC808005B198A /* Lottie */,
+				43685B9A272EC80E005B198A /* SnapKit */,
+				43685B9C272EC814005B198A /* Then */,
 			);
 			productName = "Once-A-Day";
 			productReference = 436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */;
@@ -1791,12 +1791,17 @@
 			package = 43C5BAA627244BEC00EC01BE /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		439E4284271BE5740092CC00 /* SnapKit */ = {
+		43685B98272EC808005B198A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43FE71D3271C576C0053DBE3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		43685B9A272EC80E005B198A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 439E4283271BE5740092CC00 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		439E428A271BF67C0092CC00 /* Then */ = {
+		43685B9C272EC814005B198A /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 439E4289271BF67C0092CC00 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
@@ -1810,11 +1815,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 43C5BAA627244BEC00EC01BE /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
-		};
-		43FE71D4271C576C0053DBE3 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 43FE71D3271C576C0053DBE3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
