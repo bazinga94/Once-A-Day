@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-final class TimeLineUseCaseProvider: Domain.TimeLineUseCaseProvider {
+public final class TimeLineUseCaseProvider: Domain.TimeLineUseCaseProvider {
 
 	// TODO: Framework화 하면 명명 변경
 	private let configuration: Realm.Configuration

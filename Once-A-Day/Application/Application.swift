@@ -6,15 +6,16 @@
 //
 
 import Domain
+import RealmPlatform
 import UIKit
 
 final class Application {
 	static let shared = Application()
 
-	private let timeLineUseCaseProviderByRealm: TimeLineUseCaseProvider
+	private let timeLineUseCaseProvider: Domain.TimeLineUseCaseProvider
 
 	init() {
-		self.timeLineUseCaseProviderByRealm = TimeLineUseCaseProviderByRealm()
+		self.timeLineUseCaseProvider = RealmPlatform.TimeLineUseCaseProvider()
 	}
 
 	func configureMainInterface(in window: UIWindow) {
@@ -22,7 +23,7 @@ final class Application {
 
 		let timeLineNavigationController = UINavigationController()
 		let timeLineNavigator = DefaultTimeLineNavigator(navigationController: timeLineNavigationController,
-														 services: timeLineUseCaseProviderByRealm)
+														 services: timeLineUseCaseProvider)
 
 		let createPostNavigationController = UINavigationController()
 		let createPostNavigator = DefaultCreatePostNavigator(navigationController: createPostNavigationController)
