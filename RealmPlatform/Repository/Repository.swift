@@ -39,6 +39,6 @@ final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.R
 			return Observable.array(from: objects)
 				.mapToDomain()
 		}
-		.subscribeOn(scheduler)
+		.subscribe(on: scheduler)
 	}
 }
