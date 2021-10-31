@@ -15,9 +15,9 @@ final class TimeLineUseCase: Domain.TimeLineUseCase {
 
 	func fetchTimeLine() -> Observable<[TimeLineContent]> {
 		let observable: Observable<[TimeLineContent]> = Observable.of([
-			TimeLineContent(textContent: "1"),
-			TimeLineContent(textContent: "2"),
-			TimeLineContent(textContent: "3")])
+			TimeLineContent(text: "1"),
+			TimeLineContent(text: "2"),
+			TimeLineContent(text: "3")])
 		return observable
 	}
 }
