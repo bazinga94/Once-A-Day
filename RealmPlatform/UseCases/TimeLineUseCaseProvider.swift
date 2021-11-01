@@ -20,6 +20,7 @@ public final class TimeLineUseCaseProvider: Domain.TimeLineUseCaseProvider {
 	}
 
 	public func makeTimeLineUseCase() -> Domain.TimeLineUseCase {
-		return TimeLineUseCase()
+		let repository = Repository<TimeLineContent>.init(configuration: configuration)
+		return TimeLineUseCase(repository: repository)
 	}
 }
