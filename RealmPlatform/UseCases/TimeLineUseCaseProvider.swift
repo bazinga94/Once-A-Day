@@ -12,7 +12,6 @@ import RealmSwift
 
 public final class TimeLineUseCaseProvider: Domain.TimeLineUseCaseProvider {
 
-	// TODO: Framework화 하면 명명 변경
 	private let configuration: Realm.Configuration
 
 	public init(configuration: Realm.Configuration = Realm.Configuration()) {
