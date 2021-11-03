@@ -13,6 +13,9 @@ disabled_rules: # Default Rules에서 비활성화할 규칙
 #	TODO 주석 작성을 위해
   - todo
 
+#	Realm initialze를 위해
+  - force_try
+
 #	tab을 이상하게 인식하는듯..
   - vertical_parameter_alignment
 

@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+//import RxRealm
 import Realm
 import RealmSwift
 
@@ -36,7 +37,8 @@ final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.R
 			let realm = self.realm
 			let objects = realm.objects(T.RealmType.self)
 
-			return Observable.array(from: objects)
+			return Observable.of(objects)
+//			return Observable.array(from: objects)
 				.mapToDomain()
 		}
 		.subscribe(on: scheduler)
