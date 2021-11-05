@@ -12,6 +12,8 @@ class CreatePostViewController: UIViewController {
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var submitButton: UIButton!
 
+	var viewModel: CreatePostViewModel!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}

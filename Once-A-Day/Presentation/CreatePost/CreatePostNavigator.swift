@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 protocol CreatePostNavigator {
 	func toCreatePost()
@@ -14,13 +15,17 @@ protocol CreatePostNavigator {
 class DefaultCreatePostNavigator: CreatePostNavigator {
 
 	private let navigationController: UINavigationController
+	private let services: CreatePostUseCaseProvider
 
-	init(navigationController: UINavigationController) {
+	init(navigationController: UINavigationController, services: CreatePostUseCaseProvider) {
 		self.navigationController = navigationController
+		self.services = services
 	}
 
 	func toCreatePost() {
 		let vc = CreatePostViewController()
+		let viewModel = CreatePostViewModel(useCase: services.makeCreatePostUseCase(), navigator: self)
+		vc.viewModel = viewModel
 		navigationController.pushViewController(vc, animated: false)
 	}
 }

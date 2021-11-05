@@ -42,6 +42,8 @@
 		43685B9D272EC814005B198A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9C272EC814005B198A /* Then */; };
 		43685BA8272ED20A005B198A /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA7272ED20A005B198A /* Rx+Extension.swift */; };
 		43685BAA27357CDD005B198A /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA927357CDD005B198A /* CreatePostViewModel.swift */; };
+		43685BB127357EBE005B198A /* CreatePostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB027357EBE005B198A /* CreatePostUseCase.swift */; };
+		43685BB327357ECC005B198A /* CreatePostUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB227357ECC005B198A /* CreatePostUseCaseProvider.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -186,6 +188,8 @@
 		43685B95272EC137005B198A /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		43685BA7272ED20A005B198A /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
 		43685BA927357CDD005B198A /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		43685BB027357EBE005B198A /* CreatePostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCase.swift; sourceTree = "<group>"; };
+		43685BB227357ECC005B198A /* CreatePostUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCaseProvider.swift; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -388,6 +392,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		43685BAC27357E8E005B198A /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */,
+				43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		43685BAD27357E98005B198A /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				43685BB027357EBE005B198A /* CreatePostUseCase.swift */,
+				43685BB227357ECC005B198A /* CreatePostUseCaseProvider.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
 		436FE412271B1EBE00DA5CBF = {
 			isa = PBXGroup;
 			children = (
@@ -533,8 +555,8 @@
 			children = (
 				43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */,
 				43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */,
-				43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */,
 				43685BA927357CDD005B198A /* CreatePostViewModel.swift */,
+				43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -568,8 +590,8 @@
 		43C5BAC42725856F00EC01BE /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				43C5BAC52725858100EC01BE /* TimeLineUseCase.swift */,
-				43C5BACA27258A2D00EC01BE /* TimeLineUseCaseProvider.swift */,
+				43685BAC27357E8E005B198A /* TimeLine */,
+				43685BAD27357E98005B198A /* CreatePost */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1032,7 +1054,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43685BB327357ECC005B198A /* CreatePostUseCaseProvider.swift in Sources */,
 				43685B4A272AEA8F005B198A /* TimeLineContent.swift in Sources */,
+				43685BB127357EBE005B198A /* CreatePostUseCase.swift in Sources */,
 				43685B4B272AEA8F005B198A /* TimeLineUseCase.swift in Sources */,
 				43685B4C272AEA8F005B198A /* TimeLineUseCaseProvider.swift in Sources */,
 				43685B30272AE874005B198A /* Domain.docc in Sources */,
