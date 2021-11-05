@@ -44,6 +44,8 @@
 		43685BAA27357CDD005B198A /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA927357CDD005B198A /* CreatePostViewModel.swift */; };
 		43685BB127357EBE005B198A /* CreatePostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB027357EBE005B198A /* CreatePostUseCase.swift */; };
 		43685BB327357ECC005B198A /* CreatePostUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB227357ECC005B198A /* CreatePostUseCaseProvider.swift */; };
+		43685BB7273584A0005B198A /* CreatePostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB6273584A0005B198A /* CreatePostUseCase.swift */; };
+		43685BB9273584AD005B198A /* CreatePostUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BB8273584AD005B198A /* CreatePostUseCaseProvider.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -190,6 +192,8 @@
 		43685BA927357CDD005B198A /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		43685BB027357EBE005B198A /* CreatePostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCase.swift; sourceTree = "<group>"; };
 		43685BB227357ECC005B198A /* CreatePostUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCaseProvider.swift; sourceTree = "<group>"; };
+		43685BB6273584A0005B198A /* CreatePostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCase.swift; sourceTree = "<group>"; };
+		43685BB8273584AD005B198A /* CreatePostUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUseCaseProvider.swift; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -410,6 +414,24 @@
 			path = CreatePost;
 			sourceTree = "<group>";
 		};
+		43685BB42735847E005B198A /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				43C5BAD027258E0C00EC01BE /* TimeLineUseCase.swift */,
+				43C5BACE27258D9900EC01BE /* TimeLineUseCaseProvider.swift */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		43685BB527358488005B198A /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				43685BB6273584A0005B198A /* CreatePostUseCase.swift */,
+				43685BB8273584AD005B198A /* CreatePostUseCaseProvider.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
 		436FE412271B1EBE00DA5CBF = {
 			isa = PBXGroup;
 			children = (
@@ -607,8 +629,8 @@
 		43C5BACD27258D5700EC01BE /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				43C5BAD027258E0C00EC01BE /* TimeLineUseCase.swift */,
-				43C5BACE27258D9900EC01BE /* TimeLineUseCaseProvider.swift */,
+				43685BB42735847E005B198A /* TimeLine */,
+				43685BB527358488005B198A /* CreatePost */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1076,6 +1098,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43685BA8272ED20A005B198A /* Rx+Extension.swift in Sources */,
+				43685BB7273584A0005B198A /* CreatePostUseCase.swift in Sources */,
 				43685B6F272AF0A6005B198A /* TimeLineUseCase.swift in Sources */,
 				43685B70272AF0A6005B198A /* TimeLineUseCaseProvider.swift in Sources */,
 				43685B92272EB923005B198A /* RealmRepresentable.swift in Sources */,
@@ -1084,6 +1107,7 @@
 				43685B96272EC137005B198A /* RunLoopThreadScheduler.swift in Sources */,
 				43685B56272AF05A005B198A /* RealmPlatform.docc in Sources */,
 				43685B90272EB905005B198A /* DomainConvertibleType.swift in Sources */,
+				43685BB9273584AD005B198A /* CreatePostUseCaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

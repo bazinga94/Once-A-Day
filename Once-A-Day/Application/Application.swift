@@ -13,9 +13,11 @@ final class Application {
 	static let shared = Application()
 
 	private let timeLineUseCaseProvider: Domain.TimeLineUseCaseProvider
+	private let createPostUseCaseProvider: Domain.CreatePostUseCaseProvider
 
 	init() {
 		self.timeLineUseCaseProvider = RealmPlatform.TimeLineUseCaseProvider()
+		self.createPostUseCaseProvider = RealmPlatform.CreatePostUseCaseProvider()
 	}
 
 	func configureMainInterface(in window: UIWindow) {
@@ -26,7 +28,7 @@ final class Application {
 														 services: timeLineUseCaseProvider)
 
 		let createPostNavigationController = UINavigationController()
-		let createPostNavigator = DefaultCreatePostNavigator(navigationController: createPostNavigationController)
+		let createPostNavigator = DefaultCreatePostNavigator(navigationController: createPostNavigationController, services: createPostUseCaseProvider)
 
 		baseTabBarviewController.viewControllers = [
 			timeLineNavigationController,
