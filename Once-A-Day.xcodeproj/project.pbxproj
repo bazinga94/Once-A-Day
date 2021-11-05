@@ -41,6 +41,7 @@
 		43685B9B272EC80E005B198A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9A272EC80E005B198A /* SnapKit */; };
 		43685B9D272EC814005B198A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 43685B9C272EC814005B198A /* Then */; };
 		43685BA8272ED20A005B198A /* Rx+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA7272ED20A005B198A /* Rx+Extension.swift */; };
+		43685BAA27357CDD005B198A /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685BA927357CDD005B198A /* CreatePostViewModel.swift */; };
 		436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */; };
 		436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */; };
 		436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FE427271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld */; };
@@ -184,6 +185,7 @@
 		43685B91272EB923005B198A /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		43685B95272EC137005B198A /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
 		43685BA7272ED20A005B198A /* Rx+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extension.swift"; sourceTree = "<group>"; };
+		43685BA927357CDD005B198A /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		436FE41B271B1EBE00DA5CBF /* Once-A-Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Once-A-Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436FE41E271B1EBE00DA5CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436FE420271B1EBE00DA5CBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				43C5BA9C2724211F00EC01BE /* CreatePostViewController.swift */,
 				43C5BA9D2724211F00EC01BE /* CreatePostViewController.xib */,
 				43C5BAA427243C2D00EC01BE /* CreatePostNavigator.swift */,
+				43685BA927357CDD005B198A /* CreatePostViewModel.swift */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";
@@ -1074,6 +1077,7 @@
 			files = (
 				43C5BAC02724611E00EC01BE /* UICollectionView+Extension.swift in Sources */,
 				436FE429271B1EBE00DA5CBF /* Once_A_Day.xcdatamodeld in Sources */,
+				43685BAA27357CDD005B198A /* CreatePostViewModel.swift in Sources */,
 				43FE71D2271C55C50053DBE3 /* BottomTabBarItemType.swift in Sources */,
 				43C5BABC27245E4D00EC01BE /* Observable+Extension.swift in Sources */,
 				43C5BA8F2724102500EC01BE /* Application.swift in Sources */,

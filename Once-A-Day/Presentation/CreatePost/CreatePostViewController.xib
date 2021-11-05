@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostViewController" customModule="Once_A_Day" customModuleProvider="target">
             <connections>
+                <outlet property="submitButton" destination="ux0-IG-3JS" id="bcW-r2-VCk"/>
                 <outlet property="textField" destination="zYY-Yk-0YX" id="IMS-W2-B1B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,13 +26,20 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-IG-3JS">
+                    <rect key="frame" x="172" y="510" width="70" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ux0-IG-3JS" firstAttribute="top" secondItem="zYY-Yk-0YX" secondAttribute="bottom" constant="40" id="7B5-Uq-yLs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zYY-Yk-0YX" secondAttribute="trailing" constant="30" id="TnY-5f-XW5"/>
                 <constraint firstItem="zYY-Yk-0YX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="dYo-Kj-HoG"/>
                 <constraint firstItem="zYY-Yk-0YX" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ha6-8Z-7Xb"/>
+                <constraint firstItem="ux0-IG-3JS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xqq-yE-RmM"/>
             </constraints>
             <point key="canvasLocation" x="133" y="80"/>
         </view>

@@ -10,6 +10,7 @@ import UIKit
 class CreatePostViewController: UIViewController {
 
 	@IBOutlet weak var textField: UITextField!
+	@IBOutlet weak var submitButton: UIButton!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
