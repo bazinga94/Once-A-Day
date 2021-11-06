@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CreatePostViewController: UIViewController {
 
@@ -16,5 +18,15 @@ class CreatePostViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+	}
+
+	private func vindViewModel() {
+		let input = CreatePostViewModel.Input(
+			textContent: textField.rx.text.orEmpty.asDriver(),
+			createPostTrigger: submitButton.rx.tap.asDriver()
+		)
+
+		let output = viewModel.transform(input: input)
 	}
 }

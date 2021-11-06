@@ -55,7 +55,6 @@ private extension TimeLineViewController {
 	}
 
 	func bindViewModel() {
-
 		let input = TimeLineViewModel.Input()
 		let output = viewModel.transform(input: input)
 
