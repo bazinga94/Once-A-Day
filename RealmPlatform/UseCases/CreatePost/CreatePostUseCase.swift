@@ -7,6 +7,7 @@
 
 import Domain
 import Foundation
+import RxSwift
 
 final class CreatePostUseCase<Repository>: Domain.CreatePostUseCase where Repository: AbstractRepository, Repository.DomainEntity == TimeLineContent {
 
@@ -16,7 +17,7 @@ final class CreatePostUseCase<Repository>: Domain.CreatePostUseCase where Reposi
 		self.repository = repository
 	}
 
-	func save(content: TimeLineContent) {
-
+	func save(content: TimeLineContent) -> Observable<Void> {
+		return Observable.just(Void())
 	}
 }

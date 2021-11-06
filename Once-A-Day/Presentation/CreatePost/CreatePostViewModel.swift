@@ -27,9 +27,20 @@ class CreatePostViewModel: ViewModelType {
 	}
 
 	func transform(input: Input) -> Output {
-		let saveText = Driver.of(input.textContent)
-		let createPost = input.createPostTrigger
-			.do(onNext: navigator.toCreatePost)
+
+		let createPost = input.createPostTrigger.withLatestFrom(input.textContent)
+			.map {
+				TimeLineContent(text: $0)
+			}
+			.flatMapLatest { [weak self] timeLineContent in
+				guard let self = self else { return }
+				return self.useCase.save(content: timeLineContent)
+					.asDriverOnErrorJustComplete()
+			}
+//			.flatMapLatest { [weak self] in
+//				return self?.useCase.save(content: $0)
+//			}
+
 		return Output()
 	}
 }

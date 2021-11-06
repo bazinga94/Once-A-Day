@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol CreatePostUseCase {
-	func save(content: TimeLineContent)
+	func save(content: TimeLineContent) -> Observable<Void>
 }
