@@ -32,11 +32,19 @@ class CreatePostViewModel: ViewModelType {
 			.map {
 				TimeLineContent(text: $0)
 			}
-			.flatMapLatest { [weak self] timeLineContent in
+			.flatMap { [weak self] timeLineContent in
 				guard let self = self else { return }
 				return self.useCase.save(content: timeLineContent)
 					.asDriverOnErrorJustComplete()
 			}
+
+
+
+//			.flatMapLatest { [weak self] timeLineContent in
+//				guard let self = self else { return }
+//				return self.useCase.save(content: timeLineContent)
+//					.asDriverOnErrorJustComplete()
+//			}
 //			.flatMapLatest { [weak self] in
 //				return self?.useCase.save(content: $0)
 //			}
