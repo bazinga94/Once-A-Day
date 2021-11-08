@@ -29,14 +29,21 @@ class CreatePostViewModel: ViewModelType {
 	func transform(input: Input) -> Output {
 
 		let createPost = input.createPostTrigger.withLatestFrom(input.textContent)
-			.map {
-				TimeLineContent(text: $0)
+			.map { text in
+				TimeLineContent(text: text)
 			}
-			.flatMap { [weak self] timeLineContent in
-				guard let self = self else { return }
+			.flatMapLatest { timeLineContent in
 				return self.useCase.save(content: timeLineContent)
 					.asDriverOnErrorJustComplete()
 			}
+//			.map {
+//				TimeLineContent(text: $0)
+//			}
+//			.flatMap { [weak self] timeLineContent in
+//				guard let self = self else { return }
+//				return self.useCase.save(content: timeLineContent)
+//					.asDriverOnErrorJustComplete()
+//			}
 
 
 
