@@ -29,33 +29,14 @@ class CreatePostViewModel: ViewModelType {
 	func transform(input: Input) -> Output {
 
 		let createPost = input.createPostTrigger.withLatestFrom(input.textContent)
-			.map { text in
-				TimeLineContent(text: text)
+			.map {
+				TimeLineContent(text: $0)
 			}
-			.flatMapLatest { timeLineContent in
-				return self.useCase.save(content: timeLineContent)
+			.flatMapLatest {
+//				guard let self = self else { return }	// self 가 nil 일때 return 처리를 어떻게 하지...??
+				return self.useCase.save(content: $0)
 					.asDriverOnErrorJustComplete()
 			}
-//			.map {
-//				TimeLineContent(text: $0)
-//			}
-//			.flatMap { [weak self] timeLineContent in
-//				guard let self = self else { return }
-//				return self.useCase.save(content: timeLineContent)
-//					.asDriverOnErrorJustComplete()
-//			}
-
-
-
-//			.flatMapLatest { [weak self] timeLineContent in
-//				guard let self = self else { return }
-//				return self.useCase.save(content: timeLineContent)
-//					.asDriverOnErrorJustComplete()
-//			}
-//			.flatMapLatest { [weak self] in
-//				return self?.useCase.save(content: $0)
-//			}
-
 		return Output()
 	}
 }
