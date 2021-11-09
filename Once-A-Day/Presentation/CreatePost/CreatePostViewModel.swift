@@ -32,9 +32,9 @@ class CreatePostViewModel: ViewModelType {
 			.map {
 				TimeLineContent(text: $0)
 			}
-			.flatMapLatest {
-//				guard let self = self else { return }	// self 가 nil 일때 return 처리를 어떻게 하지...??
-				return self.useCase.save(content: $0)
+			.flatMapLatest { [unowned self] timeLineContent in
+//				guard let self = self else { return }	// self 가 nil 일때 return 처리를 어떻게 하지...?? unowned 말고 방법이 없을까?
+				return self.useCase.save(content: timeLineContent)
 					.asDriverOnErrorJustComplete()
 			}
 		return Output()
