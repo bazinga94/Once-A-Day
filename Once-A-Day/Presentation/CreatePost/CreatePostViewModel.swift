@@ -16,6 +16,8 @@ class CreatePostViewModel: ViewModelType {
 		let createPostTrigger: Driver<Void>
 	}
 	struct Output {
+		let createPost: Driver<Void>
+		let createEnabled: Driver<Bool>
 	}
 
 	private let useCase: CreatePostUseCase
@@ -28,6 +30,11 @@ class CreatePostViewModel: ViewModelType {
 
 	func transform(input: Input) -> Output {
 
+		let createEnabled = input.textContent
+			.map {
+				!$0.isEmpty
+			}
+
 		let createPost = input.createPostTrigger.withLatestFrom(input.textContent)
 			.map {
 				TimeLineContent(text: $0)
@@ -37,6 +44,7 @@ class CreatePostViewModel: ViewModelType {
 				return self.useCase.save(content: timeLineContent)
 					.asDriverOnErrorJustComplete()
 			}
-		return Output()
+
+		return Output(createPost: createPost, createEnabled: createEnabled)
 	}
 }

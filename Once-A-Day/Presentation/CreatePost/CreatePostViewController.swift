@@ -16,17 +16,22 @@ class CreatePostViewController: UIViewController {
 
 	var viewModel: CreatePostViewModel!
 
+	private let disposeBag = DisposeBag()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		bindViewModel()
 	}
 
-	private func vindViewModel() {
+	private func bindViewModel() {
 		let input = CreatePostViewModel.Input(
 			textContent: textField.rx.text.orEmpty.asDriver(),
 			createPostTrigger: submitButton.rx.tap.asDriver()
 		)
 
 		let output = viewModel.transform(input: input)
+
+		output.createEnabled.drive(submitButton.rx.isEnabled)
+			.disposed(by: disposeBag)
 	}
 }
