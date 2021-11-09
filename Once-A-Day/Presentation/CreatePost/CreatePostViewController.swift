@@ -31,6 +31,8 @@ class CreatePostViewController: UIViewController {
 
 		let output = viewModel.transform(input: input)
 
+		output.createPost.drive()
+			.disposed(by: disposeBag)
 		output.createEnabled.drive(submitButton.rx.isEnabled)
 			.disposed(by: disposeBag)
 	}
