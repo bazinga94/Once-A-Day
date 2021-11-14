@@ -10,8 +10,10 @@ import Realm
 import RealmSwift
 
 final class RMTimeLineContent: Object {
-	@objc dynamic var id: String = ""
 	@objc dynamic var text: String = ""
+	@objc dynamic var id: String = ""
+	@objc dynamic var userId: String = ""
+	@objc dynamic var createdAt: String = ""
 
 	override class func primaryKey() -> String? {
 		return "id"
@@ -34,6 +36,9 @@ extension TimeLineContent: RealmRepresentable {
 	func asRealm() -> RMTimeLineContent {
 		let object = RMTimeLineContent()
 		object.text = text
+		object.id = id
+		object.userId = userId
+		object.createdAt = createdAt
 		return object
 	}
 }
