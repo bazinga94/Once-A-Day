@@ -18,6 +18,6 @@ final class CreatePostUseCase<Repository>: Domain.CreatePostUseCase where Reposi
 	}
 
 	func save(content: TimeLineContent) -> Observable<Void> {
-		return Observable.just(Void())
+		return repository.save(entity: content)
 	}
 }

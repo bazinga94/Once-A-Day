@@ -9,8 +9,15 @@ import Domain
 import Realm
 import RealmSwift
 
-class RMTimeLineContent: Object {
+final class RMTimeLineContent: Object {
+	@objc dynamic var id: String = ""
 	@objc dynamic var text: String = ""
+
+	override class func primaryKey() -> String? {
+		return "id"
+	}
+//	Terminating app due to uncaught exception 'RLMException', reason: does not have a primary key and can not be updated'
+//	*** Terminating app due to uncaught exception 'RLMException', reason: 'Primary key property 'id' does not exist on object 'RMTimeLineContent''
 }
 
 extension RMTimeLineContent: DomainConvertibleType {
@@ -20,14 +27,11 @@ extension RMTimeLineContent: DomainConvertibleType {
 }
 
 extension TimeLineContent: RealmRepresentable {
-//	internal var uid: String {
+//	internal var id: String {
 //		return ""
 //	}
 
 	func asRealm() -> RMTimeLineContent {
-//		return RMTimeLineContent().then {	// 예시 코드에는 build라는 extension을 만들어서 사용
-//			$0.text = text
-//		}
 		let object = RMTimeLineContent()
 		object.text = text
 		return object

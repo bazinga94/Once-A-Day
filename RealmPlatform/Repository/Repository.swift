@@ -13,6 +13,7 @@ import RealmSwift
 protocol AbstractRepository {
 	associatedtype DomainEntity
 	func queryAll() -> Observable<[DomainEntity]>
+	func save(entity: DomainEntity) -> Observable<Void>
 }
 
 final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.RealmType.DomainType, T.RealmType: Object {
@@ -41,5 +42,23 @@ final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.R
 				.mapToDomain()
 		}
 		.subscribe(on: scheduler)
+	}
+
+	func save(entity: T) -> Observable<Void> {
+		return Observable.deferred {
+			return Observable.create { observer in
+				do {
+					try self.realm.write {
+//						self.realm.add(entity.asRealm(), update: true)
+						self.realm.add(entity.asRealm(), update: .all)
+					}
+					observer.onNext(())
+					observer.onCompleted()
+				} catch {
+					observer.onError(error)
+				}
+				return Disposables.create()
+			}
+		}.subscribe(on: scheduler)
 	}
 }
