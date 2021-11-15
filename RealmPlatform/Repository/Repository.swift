@@ -38,7 +38,8 @@ final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.R
 			let objects = realm.objects(T.RealmType.self)
 
 			return Observable.of(objects)
-//			return Observable.array(from: objects) RxRealm에서 사용 가능
+//			return Observable.array(from: objects)
+//			RxRealm에서 사용 가능
 				.mapToDomain()
 		}
 		.subscribe(on: scheduler)
@@ -49,11 +50,10 @@ final class Repository<T: RealmRepresentable>: AbstractRepository where T == T.R
 			return Observable.create { observer in
 				do {
 					try self.realm.write {
-//						self.realm.add(entity.asRealm(), update: true)
 						self.realm.add(entity.asRealm(), update: .all)
 					}
 					observer.onNext(())
-					observer.onCompleted()
+					observer.onCompleted()	// 필요한가?
 				} catch {
 					observer.onError(error)
 				}
