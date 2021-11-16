@@ -18,6 +18,23 @@ class CreatePostViewController: UIViewController {
 
 	private let disposeBag = DisposeBag()
 
+	var errorBinding: Binder<Error> {
+		return Binder(self, binding: { (vc, error) in
+			let alert = UIAlertController(
+				title: "Present Error",
+				message: error.localizedDescription,
+				preferredStyle: .alert
+			)
+			let action = UIAlertAction(
+				title: "Dismiss",
+				style: UIAlertAction.Style.cancel,
+				handler: nil
+			)
+			alert.addAction(action)
+			vc.present(alert, animated: true, completion: nil)
+		})
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		bindViewModel()
@@ -31,9 +48,14 @@ class CreatePostViewController: UIViewController {
 
 		let output = viewModel.transform(input: input)
 
-		output.createPost.drive()
+		output.createPost
+			.drive()
 			.disposed(by: disposeBag)
-		output.createEnabled.drive(submitButton.rx.isEnabled)
+		output.createEnabled
+			.drive(submitButton.rx.isEnabled)
+			.disposed(by: disposeBag)
+		output.error
+			.drive(errorBinding)
 			.disposed(by: disposeBag)
 	}
 }
