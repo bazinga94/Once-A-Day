@@ -28,10 +28,10 @@ class TimeLineViewController: UIViewController {
 	var viewModel: TimeLineViewModel!
 
 	var errorBinding: Binder<Error> {
-		return Binder(self, binding: { (vc, _) in
+		return Binder(self, binding: { (vc, error) in
 			let alert = UIAlertController(
 				title: "Present Error",
-				message: "Something went wrong",
+				message: error.localizedDescription,
 				preferredStyle: .alert
 			)
 			let action = UIAlertAction(
