@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		297AB3114F2E63EA33C5B329 /* Pods_Once_A_Day_Once_A_DayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3820DD2E2A81E5B4159B7DE2 /* Pods_Once_A_Day_Once_A_DayUITests.framework */; };
+		4362BA742743F52A00EDEB65 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4362BA732743F52A00EDEB65 /* ErrorTracker.swift */; };
 		43685B30272AE874005B198A /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 43685B2F272AE874005B198A /* Domain.docc */; };
 		43685B36272AE874005B198A /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43685B2C272AE874005B198A /* Domain.framework */; };
 		43685B3D272AE874005B198A /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43685B3C272AE874005B198A /* DomainTests.swift */; };
@@ -174,6 +175,7 @@
 /* Begin PBXFileReference section */
 		09A3BE14367A748BB9E1B651 /* Pods_Once_A_Day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Once_A_Day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3820DD2E2A81E5B4159B7DE2 /* Pods_Once_A_Day_Once_A_DayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Once_A_Day_Once_A_DayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4362BA732743F52A00EDEB65 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		43685B2C272AE874005B198A /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43685B2E272AE874005B198A /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		43685B2F272AE874005B198A /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				43C5BAB927245A4A00EC01BE /* Reusable.swift */,
+				4362BA732743F52A00EDEB65 /* ErrorTracker.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1130,6 +1133,7 @@
 				43C5BABC27245E4D00EC01BE /* Observable+Extension.swift in Sources */,
 				43C5BA8F2724102500EC01BE /* Application.swift in Sources */,
 				43C5BA9A27241B2600EC01BE /* TimeLineNavigator.swift in Sources */,
+				4362BA742743F52A00EDEB65 /* ErrorTracker.swift in Sources */,
 				436FE41F271B1EBE00DA5CBF /* AppDelegate.swift in Sources */,
 				43C5BABE2724611000EC01BE /* UITableView+Extension.swift in Sources */,
 				436FE421271B1EBE00DA5CBF /* SceneDelegate.swift in Sources */,

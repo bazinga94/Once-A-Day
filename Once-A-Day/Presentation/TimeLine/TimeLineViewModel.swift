@@ -15,7 +15,8 @@ class TimeLineViewModel: ViewModelType {
 
 	}
 	struct Output {
-		var timeLineContents: Driver<[TimeLineTextCellModel]>
+		let timeLineContents: Driver<[TimeLineTextCellModel]>
+		let error: Driver<Error>
 	}
 
 	private let useCase: TimeLineUseCase
@@ -27,7 +28,9 @@ class TimeLineViewModel: ViewModelType {
 	}
 
 	func transform(input: Input) -> Output {
+		let errorTracker = ErrorTracker()
 		let timeLineContents = useCase.fetchTimeLine()
+			.trackError(errorTracker)
 			.asDriverOnErrorJustComplete()
 			.map {
 				$0.map {
@@ -36,7 +39,8 @@ class TimeLineViewModel: ViewModelType {
 			}
 
 		return Output(
-			timeLineContents: timeLineContents
+			timeLineContents: timeLineContents,
+			error: errorTracker.asDriver()
 		)
 	}
 }

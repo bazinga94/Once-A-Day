@@ -18,6 +18,7 @@ class CreatePostViewModel: ViewModelType {
 	struct Output {
 		let createPost: Driver<Void>
 		let createEnabled: Driver<Bool>
+		let error: Driver<Error>
 	}
 
 	private let useCase: CreatePostUseCase
@@ -29,6 +30,7 @@ class CreatePostViewModel: ViewModelType {
 	}
 
 	func transform(input: Input) -> Output {
+		let errorTracker = ErrorTracker()
 
 		let createEnabled = input.textContent
 			.map {
@@ -42,9 +44,14 @@ class CreatePostViewModel: ViewModelType {
 			.flatMapLatest { [unowned self] timeLineContent in
 //				guard let self = self else { return }	// self 가 nil 일때 return 처리를 어떻게 하지...?? unowned 말고 방법이 없을까?
 				return self.useCase.save(content: timeLineContent)
+					.trackError(errorTracker)
 					.asDriverOnErrorJustComplete()
 			}
 
-		return Output(createPost: createPost, createEnabled: createEnabled)
+		return Output(
+			createPost: createPost,
+			createEnabled: createEnabled,
+			error: errorTracker.asDriver()
+		)
 	}
 }
