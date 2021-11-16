@@ -27,6 +27,23 @@ class TimeLineViewController: UIViewController {
 
 	var viewModel: TimeLineViewModel!
 
+	var errorBinding: Binder<Error> {
+		return Binder(self, binding: { (vc, _) in
+			let alert = UIAlertController(
+				title: "Present Error",
+				message: "Something went wrong",
+				preferredStyle: .alert
+			)
+			let action = UIAlertAction(
+				title: "Dismiss",
+				style: UIAlertAction.Style.cancel,
+				handler: nil
+			)
+			alert.addAction(action)
+			vc.present(alert, animated: true, completion: nil)
+		})
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		collectionView.delegate = self		// 이게 맞나...?
@@ -62,6 +79,10 @@ private extension TimeLineViewController {
 			.drive(collectionView.rx.items(cellIdentifier: TimeLineTextCollectionViewCell.reuseID, cellType: TimeLineTextCollectionViewCell.self)) { _, viewModel, cell in
 				cell.configure(data: viewModel)
 			}
+			.disposed(by: disposeBag)
+
+		output.error
+			.drive(errorBinding)
 			.disposed(by: disposeBag)
 	}
 }
