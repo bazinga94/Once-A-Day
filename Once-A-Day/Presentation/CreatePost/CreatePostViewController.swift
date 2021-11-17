@@ -40,10 +40,6 @@ class CreatePostViewController: UIViewController {
 		bindViewModel()
 	}
 
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-	}
-
 	private func bindViewModel() {
 		let input = CreatePostViewModel.Input(
 			textContent: textField.rx.text.orEmpty.asDriver(),

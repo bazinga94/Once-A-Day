@@ -72,7 +72,11 @@ private extension TimeLineViewController {
 	}
 
 	func bindViewModel() {
-		let input = TimeLineViewModel.Input()
+		let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+			.mapToVoid()
+			.asDriverOnErrorJustComplete()
+
+		let input = TimeLineViewModel.Input(trigger: viewWillAppear)
 		let output = viewModel.transform(input: input)
 
 		output.timeLineContents

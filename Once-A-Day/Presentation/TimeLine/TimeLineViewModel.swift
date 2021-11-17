@@ -12,7 +12,7 @@ import RxCocoa
 
 class TimeLineViewModel: ViewModelType {
 	struct Input {
-
+		let trigger: Driver<Void>
 	}
 	struct Output {
 		let timeLineContents: Driver<[TimeLineTextCellModel]>
@@ -29,14 +29,26 @@ class TimeLineViewModel: ViewModelType {
 
 	func transform(input: Input) -> Output {
 		let errorTracker = ErrorTracker()
-		let timeLineContents = useCase.fetchTimeLine()
-			.trackError(errorTracker)
-			.asDriverOnErrorJustComplete()
-			.map {
-				$0.map {
-					TimeLineTextCellModel(timeLineContent: $0)
+
+		let timeLineContents = input.trigger.flatMapLatest { [unowned self] _ in
+			return self.useCase.fetchTimeLine()
+				.trackError(errorTracker)
+				.asDriverOnErrorJustComplete()
+				.map {
+					$0.map {
+						TimeLineTextCellModel(timeLineContent: $0)
+					}
 				}
-			}
+		}
+
+//		let timeLineContents = useCase.fetchTimeLine()
+//			.trackError(errorTracker)
+//			.asDriverOnErrorJustComplete()
+//			.map {
+//				$0.map {
+//					TimeLineTextCellModel(timeLineContent: $0)
+//				}
+//			}
 
 		return Output(
 			timeLineContents: timeLineContents,
