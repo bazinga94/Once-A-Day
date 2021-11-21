@@ -30,7 +30,7 @@ class TimeLineViewController: UIViewController {
 	var errorBinding: Binder<Error> {
 		return Binder(self, binding: { (vc, error) in
 			let alert = UIAlertController(
-				title: "Present Error",
+				title: "Error Alert",
 				message: error.localizedDescription,
 				preferredStyle: .alert
 			)
