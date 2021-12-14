@@ -477,7 +477,6 @@
 				43C5BAB827245A2E00EC01BE /* Utility */,
 				436FE46D271B284600DA5CBF /* Extensions */,
 				436FE46A271B282E00DA5CBF /* Presentation */,
-				436FE46C271B283E00DA5CBF /* Data */,
 			);
 			path = "Once-A-Day";
 			sourceTree = "<group>";
@@ -508,13 +507,6 @@
 				43FE71C9271C53970053DBE3 /* TabBar */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		436FE46C271B283E00DA5CBF /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		436FE46D271B284600DA5CBF /* Extensions */ = {
