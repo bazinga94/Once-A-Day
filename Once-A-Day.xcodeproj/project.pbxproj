@@ -123,13 +123,6 @@
 			remoteGlobalIDString = 43685B51272AF05A005B198A;
 			remoteInfo = RealmPlatform;
 		};
-		43685B74272AF229005B198A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43685B2B272AE874005B198A;
-			remoteInfo = Domain;
-		};
 		436FE435271B1EBF00DA5CBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 436FE413271B1EBE00DA5CBF /* Project object */;
@@ -755,7 +748,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				43685B75272AF229005B198A /* PBXTargetDependency */,
 			);
 			name = RealmPlatform;
 			packageProductDependencies = (
@@ -1190,12 +1182,6 @@
 			isa = PBXTargetDependency;
 			target = 43685B51272AF05A005B198A /* RealmPlatform */;
 			targetProxy = 43685B65272AF05A005B198A /* PBXContainerItemProxy */;
-		};
-		43685B75272AF229005B198A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 43685B2B272AE874005B198A /* Domain */;
-			targetProxy = 43685B74272AF229005B198A /* PBXContainerItemProxy */;
 		};
 		436FE436271B1EBF00DA5CBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
